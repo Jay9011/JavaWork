@@ -4,10 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <title>테이블 과제</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            /* 두께, 선종류, 선색상 */
+            border-collapse: collapse;
+            /* border 붙이기 */
+        }
+
+
+
+        #art td {
+            border: 10px solid black;
+        }
+
+        table#art {
+            border: none;
+        }
+
+        #art .top {
+            border-top: none;
+        }
+
+        #art .left {
+            border-left: none;
+        }
+
+        #art .right {
+            border-right: none;
+        }
+
+        #art .bottom {
+            border-bottom: none;
+        }
+    </style>
 </head>
 
 <body>
-
+    <table style="width: 100%; height: 400px;">
+        <tr>
+            <td rowspan="3"></td>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <hr>
+    <table style="width: 100%; height: 400px;">
+        <tr>
+            <td rowspan="3"></td>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <hr>
+    <table style="width: 100%; height: 400px;">
+        <tr>
+            <td></td>
+            <td colspan="2" rowspan="2"></td>
+            <td rowspan="3"></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <hr>
+    <table id="art" style="width: 800px; height: 800px; margin: 0px auto;">
+        <tr style="height: 10%;">
+            <td class="top left" colspan="2" style="background-color: #e7ecf2;"></td>
+            <td class="top" colspan="2"></td>
+            <td class=" top" colspan="2" style="background-color: #f7cf35;"></td>
+            <td class="top right" rowspan="4" style="background-color: #e7ecf2; width: 5%;"></td>
+        </tr>
+        <tr style="height: 30%;">
+            <td class="left"></td>
+            <td colspan="3" rowspan="2" style="background-color: #f35b43;"></td>
+            <td colspan="2" style="background-color: #fee157;"></td>
+        </tr>
+        <tr style="height: 30%;">
+            <td class="left" rowspan="2" style="background-color: #e7ecf2;"></td>
+            <td style="background-color: #fbfdf8;"></td>
+            <td style="background-color: #fbfdf8;"></td>
+        </tr>
+        <tr style="height: 15%;">
+            <td class="left" colspan="2" rowspan="2" style="background-color: #000000; width: 30%;"></td>
+            <td style="background-color: #e0e1e3;"></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr style="height: 15%;">
+            <td class="left bottom" style="background-color: #f7cf35; width:7%;"></td>
+            <td class="bottom" style="background-color: #e0e1e3; width: 30%;"></td>
+            <td class="bottom" colspan="2" style="background-color: #1f2b51;"></td>
+            <td class="right bottom" style="background-color: #f35b43;"></td>
+        </tr>
+    </table>
 </body>
 
 </html>
