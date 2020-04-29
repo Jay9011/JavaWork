@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>캘린더 폼 작성</title>
+    <style>
+        ul,
+        div.calendar,
+        div.board {
+            margin: 0px 60px;
+
+        }
+
+        body>div.calendar,
+        body>div.board {
+            max-width: 1024px;
+            margin: 0px auto;
+        }
+
+        div.calendar,
+        div.board,
+        table.board {
+            min-width: 789px;
+        }
+
+        ul {
+            list-style-type: none;
+            background-color: whitesmoke;
+            overflow: hidden;
+            border: 1px solid #aaaaaa;
+            padding: 0px;
+            min-width: 667px;
+        }
+
+        li {
+            text-align: center;
+            width: 25%;
+            float: left;
+        }
+
+        li a {
+            text-decoration: none;
+            padding: 16px;
+            color: dimgray;
+            font-weight: bold;
+            display: block;
+        }
+
+        li a:hover {
+            background-color: #318bcf;
+            color: white;
+        }
+
+        .date {
+            font-size: 25px;
+            font-weight: bold;
+            color: #b7b7b7;
+        }
+
+        span.date {
+            font-size: 30px;
+            color: #3995de;
+        }
+
+        div.calendar {
+            text-align: center;
+        }
+
+        div.calendarbody {
+            padding: 1px;
+        }
+
+        div.calendarhead,
+        div.selector {
+            outline: 1px solid #cccccc;
+        }
+
+        div.selector {
+            font-size: 12px;
+            color: #666666;
+            font-weight: bold;
+            text-align: left;
+            padding: 5px;
+        }
+
+        table.calendar {
+            width: 100%;
+            border: 1px solid #cccccc;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        .calendar th,
+        .calendar td {
+            border: 1px solid #cccccc;
+        }
+
+        .calendar th {
+            font-weight: bold;
+            background-color: #eeeeee;
+            font-size: 16px;
+            color: #333333;
+            padding: 3px 0px;
+        }
+
+        .calendar td {
+            font-weight: bold;
+            font-size: 12px;
+            padding: 5px;
+            text-align: left;
+            vertical-align: top;
+            height: 30px;
+            color: #333333;
+        }
+
+        .board p {
+            font-size: 15px;
+            margin-bottom: 3px;
+        }
+
+        table.board {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table.board th {
+            border-top: 2px solid lightgray;
+            border-bottom: 2px solid lightgray;
+            background-color: #eeeeee;
+            padding: 7px 0px;
+            font-size: 13px;
+            color: #333333;
+        }
+
+        table.board td {
+            padding: 7px 5px;
+            font-size: 13px;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        table.board td:nth-child(1),
+        table.board td:nth-child(3),
+        table.board td:nth-child(4),
+        table.board td:nth-child(5) {
+            text-align: center;
+        }
+
+        table.board td:nth-child(1) {
+            width: 5%;
+        }
+
+        table.board td:nth-child(2) {
+            width: 55%;
+        }
+
+        table.board td:nth-child(3) {
+            width: 10%;
+        }
+
+        table.board td:nth-child(4) {
+            width: 20%;
+        }
+
+        table.board td:nth-child(5) {
+            width: 10%;
+        }
+
+        table.board tr {
+            border-bottom: 2px solid #eeeeee;
+        }
+
+        .on_line {
+            color: red;
+            border: 1px solid red;
+            border-radius: 3px;
+            margin-left: 5px;
+            font-size: 7px;
+            padding: 1px 2px;
+            font-weight: bold;
+        }
+
+        .pageNum {
+            text-align: center;
+            padding: 20px 0px;
+        }
+
+        .pageNum a,
+        .pageNum span {
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px;
+            line-height: 15px;
+            min-width: 20px;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        .pageNum span {
+            background-color: #318bcf;
+            color: white;
+            font-weight: bold;
+        }
+
+        a.page_mover {
+            border: 2px solid #eeeeee;
+            color: gray;
+            font-weight: normal;
+        }
+
+        div.searcher {
+            min-width: 667px;
+            padding: 15px 0px;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #eeeeee;
+        }
+
+        #searchtype {
+            /* display: inline-block; */
+            vertical-align: middle;
+        }
+
+        #searchstring {
+            /* display: inline-block; */
+            vertical-align: middle;
+            width: 40%;
+        }
+
+        #search {
+            /* display: inline-block; */
+            vertical-align: middle;
+            text-decoration: none;
+            background-color: #318bcf;
+            color: white;
+            font-weight: bold;
+            padding: 3px 15px;
+            font-size: 13px;
+        }
+
+        .selector .check {
+            position: relative;
+            cursor: pointer;
+            padding-left: 15px;
+            margin-left: 20px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .selector .check input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .selector .check span {
+            position: absolute;
+            top: 3px;
+            left: 0px;
+            height: 10px;
+            width: 10px;
+            background-color: #eeeeee;
+            border-radius: 50%;
+        }
+
+        .check:hover input~span {
+            background-color: #b0d8f8;
+        }
+
+        .selector input:checked~span {
+            background-color: #2196F3;
+        }
+
+        span:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .selector input:checked~span:after {
+            display: block;
+        }
+
+        .selector span:after {
+            top: 3px;
+            left: 3px;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">정책차림표</a></li>
+        <li><a href="#">미리보는 지원사업</a></li>
+        <li><a href="#">마감임박 지원사업</a></li>
+        <li><a href="#">접수중인 지원사업</a></li>
+    </ul>
+    <div class="calendar">
+        <p class="date">&lt; <span class="date">2015-06-17</span> &gt;</p>
+    </div>
+    <div class="calendar calendarhead">
+        <div class="selector">
+            <label class="check"><input type="radio" name="calendar_type" id="calendar_all" value="all"
+                    checked><span></span>전체</label>
+            <label class="check"><input type="radio" name="calendar_type" id="calendar_venture"
+                    value="venture"><span></span>창업·벤처</label>
+            <label class="check"><input type="radio" name="calendar_type" id="calendar_small"
+                    value="small"><span></span>소상공인</label>
+            <label class="check"><input type="radio" name="calendar_type" id="calendar_market"
+                    value="market"><span></span>판로·수출</label>
+            <label class="check"><input type="radio" name="calendar_type" id="calendar_RnD"
+                    value="rnd"><span></span>R&D</label>
+            <label class="check"><input type="radio" name="calendar_type" id="calendar_finance"
+                    value="finance"><span></span>금융·세제</label>
+            <label class="check"><input type="radio" name="calendar_type" id="calendar_manpower"
+                    value="manpower"><span></span>인력</label>
+        </div>
+        <div class="calendarbody">
+            <table class="calendar">
+                <tg>
+                    <th>일</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                    <th>토</th>
+                </tg>
+                <tr>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #d1fdfd;">7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="board">
+        <p><span style="color:red; font-weight: bold;">·2015년 6월 7일, 전체</span> 검색결과, <span
+                style="columns: #222222;; font-weight: bold;">진행중인 사업</span>은 <span
+                style="color:red; font-weight: bold;">총614건</span>입니다.</p>
+        <table class="board">
+            <tr>
+                <th>번호</th>
+                <th>지원사업명</th>
+                <th>주관부처</th>
+                <th>신청기간</th>
+                <th>조회</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..<span class="on_line">ON-LINE</span></td>
+                <td>중소기업청</td>
+                <td>2015.06.04~2015.06.30</td>
+                <td>731</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..<span class="on_line">ON-LINE</span></td>
+                <td>중소기업청</td>
+                <td>2015.06.04~2015.06.30</td>
+                <td>731</td>
+            </tr>
+            <tr>
+                <td>614</td>
+                <td>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..<span class="on_line">ON-LINE</span></td>
+                <td>중소기업청</td>
+                <td>2015.06.04~2015.06.30</td>
+                <td>731</td>
+            </tr>
+            <tr>
+                <td>614</td>
+                <td>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가 신청..<span class="on_line">ON-LINE</span></td>
+                <td>중소기업청</td>
+                <td>2015.06.04~2015.06.30</td>
+                <td>731</td>
+            </tr>
+        </table>
+        <div class="pageNum">
+            <a href="#" class="page_mover">&lt;&lt;</a>
+            <a href="#" class="page_mover">&lt;</a>
+            <span>1</span>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#" class="page_mover">&gt;</a>
+            <a href="#" class="page_mover">&gt;&gt;</a>
+        </div>
+        <div class="searcher">
+            <select name="searchtype" id="searchtype">
+                <option value="keyword">키워드</option>
+                <option value="title">제목</option>
+                <option value="content">내용</option>
+                <option value="writer">주관부처</option>
+            </select>
+            <input type="text" name="searchstring" id="searchstring">
+            <a href="#" class="search" id="search">검색</a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

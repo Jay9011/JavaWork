@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>주문 폼 작성</title>
+    <style>
+        table {
+            border-top: 2px solid black;
+            border-left: 1px solid gray;
+            border-right: 1px solid gray;
+            border-bottom: 2px solid gray;
+            border-collapse: collapse;
+        }
+
+        #orderinfo,
+        #receiverinfo {
+            width: 80%;
+            min-width: 900px;
+        }
+
+        #paymentinfo {
+            width: 70%;
+            min-width: 700px;
+        }
+
+        .input_long {
+            width: 80%;
+        }
+
+        td {
+            vertical-align: middle;
+            font-size: 13px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        tr td:first-child {
+            font-weight: bold;
+            vertical-align: top;
+            padding-left: 15px;
+            width: 120px;
+            font-size: 16px;
+        }
+
+        thead tr:first-child td {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        thead tr:nth-child(2) td {
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+
+        tr {
+            height: 30px;
+        }
+
+        thead {
+            background-color: #e7e7e7;
+        }
+
+        #receiverinfo tr:nth-child(5) td {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        #receiverinfo tr:nth-child(6) td {
+            padding-bottom: 30px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .phoneNum {
+            width: 60px;
+        }
+
+        input.phoneNum {
+            width: 100px;
+        }
+
+        input[type=radio]:checked+label {
+            font-weight: bold;
+        }
+
+        .recieve_msg_alert {
+            color: dodgerblue;
+        }
+
+        .payment_btn:focus {
+            border: 2px solid orangered;
+            color: orangered;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h3>주문자 정보 입력</h3>
+        <table id="orderinfo">
+            <tr>
+                <td>
+                    주문자정보
+                </td>
+                <td>
+                    비회원으로 상품구매 시 반드시 본인인증을 하셔야 합니다.
+                    <button>휴대폰인증</button>
+                    <button>아이핀인증</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    주소
+                </td>
+                <td>
+                    <input type="text" name="address_1" disabled>
+                    <button>주소찾기</button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input class="addressForm input_long" type="text" name="address_2" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input class="addressForm input_long" type="text" name="address_3" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    휴대전화
+                </td>
+                <td>
+                    <select class="phoneNum" name="phone_prefix">
+                        <option value="010" selected>010</option>
+                        <option value="070">070</option>
+                        <option value="02">02</option>
+                        <option value="031">031</option>
+                        <option value="032">032</option>
+                        <option value="033">033</option>
+                        <option value="041">041</option>
+                        <option value="042">042</option>
+                        <option value="043">043</option>
+                        <option value="044">044</option>
+                        <option value="051">051</option>
+                        <option value="052">052</option>
+                        <option value="053">053</option>
+                        <option value="054">054</option>
+                        <option value="055">055</option>
+                        <option value="061">061</option>
+                        <option value="062">062</option>
+                        <option value="063">063</option>
+                        <option value="064">064</option>
+                    </select>
+                    -
+                    <input class="phoneNum" type="number" name="phone_num1">
+                    -
+                    <input class="phoneNum" type="number" name="phone_num2">
+                    <input type="checkbox" name="SMS_agree">SMS수신동의
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    이메일
+                </td>
+                <td>
+                    <input class="email" type="text" name="emailprefix">
+                    @
+                    <input class="email" type="text" name="emailpostfix">
+                    <select name="emailpostfix_">
+                        <option value="none">직접입력</option>
+                        <option value="naver">naver.com</option>
+                        <option value="daum">daum.net</option>
+                        <option value="gmail">gmail.com</option>
+                        <option value="nate">nate.com</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <p>*SK플래닛㈜는 통신판매중개자로서 통신판매의 당사자가 아니며, 개별판매자가 등록한 상품정보 및 거래에 대해 SK플래닛㈜는 일체의 책임을 지지 않습니다.</p>
+    </section>
+    <section>
+        <h3>배송지 정보 입력</h3>
+        <table id="receiverinfo">
+            <thead>
+                <tr>
+                    <td>배송지선택</td>
+                    <td>
+                        <button>주문자 정보와 동일</button>
+                    </td>
+                </tr>
+            </thead>
+            <tr>
+                <td>받으시는분</td>
+                <td>
+                    <input type="text" name="receiver">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    주소
+                </td>
+                <td>
+                    <input type="text" name="receiver_address_1" disabled>
+                    <button>주소찾기</button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input class="addressForm input_long" type="text" name="receiver_address_2" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input class="addressForm input_long" type="text" name="receiver_address_3" required>
+                </td>
+            </tr>
+            <tr>
+                <td>휴대전화</td>
+                <td>
+                    <select class="phoneNum" name="receive_phone_prefix">
+                        <option value="010" selected>010</option>
+                        <option value="070">070</option>
+                        <option value="02">02</option>
+                        <option value="031">031</option>
+                        <option value="032">032</option>
+                        <option value="033">033</option>
+                        <option value="041">041</option>
+                        <option value="042">042</option>
+                        <option value="043">043</option>
+                        <option value="044">044</option>
+                        <option value="051">051</option>
+                        <option value="052">052</option>
+                        <option value="053">053</option>
+                        <option value="054">054</option>
+                        <option value="055">055</option>
+                        <option value="061">061</option>
+                        <option value="062">062</option>
+                        <option value="063">063</option>
+                        <option value="064">064</option>
+                    </select>
+                    -
+                    <input class="phoneNum" type="number" name="receiver_phone_num1">
+                    -
+                    <input class="phoneNum" type="number" name="receiver_phone_num2">
+                    <input type="checkbox" name="safe_phone">안심번호 사용(무료)
+                    <input type="checkbox" name="add_address">집전화 추가 입력
+                </td>
+            </tr>
+            <tr>
+                <td>배송시요구사항</td>
+                <td>
+                    <input class="recieve_msg input_long" type="text" name="receiver_msg">
+                    <span id="recieve_msg_current_max">(0자/50자)</span>
+                    <p class="recieve_msg_alert">*특정한 배송일을 지정하고자 할 경우 판매자와 연락하여 배송일을 확인해주시기 바랍니다.</p>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <h3>결제 정보 입력</h3>
+        <table id="paymentinfo">
+            <thead>
+                <tr>
+                    <td>신용카드</td>
+                    <td>
+                        <input type="radio" name="creditcard_type" id="personal" value="personal" checked>
+                        <label for="personal">신용카드(일반)</label>
+                        <input type="radio" name="creditcard_type" id="corporation" value="corporation">
+                        <label for="corporation">신용카드(법인)</label>
+                        <input type="radio" name="creditcard_type" id="oversea" value="oversea">
+                        <label for="oversea">해외발급카드</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>현금결재</td>
+                    <td>
+                        <input type="radio" name="cash_type" value="deposit">무통장입금
+                        <input type="radio" name="cash_type" value="account">실시간계좌이체
+                    </td>
+                </tr>
+            </thead>
+            <tr>
+                <td>카드선택</td>
+                <td>
+                    <select class="payment" name="select_creditcard">
+                        <option value="none" disabled selected>선택하세요</option>
+                        <option value="samsung">삼성</option>
+                        <option value="bc">BC</option>
+                        <option value="sinhan">신한</option>
+                        <option value="nh">농협</option>
+                        <option value="kb">KB국민</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>할부방식</td>
+                <td>
+                    <select class="payment" name="select_installment">
+                        <option value="1">일시불</option>
+                        <option value="2">1개월</option>
+                        <option value="3">2개월</option>
+                        <option value="4">3개월</option>
+                        <option value="5">4개월</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>결제안내</td>
+                <td>
+                    <button class="payment_btn">간편결제안내</button>
+                    <button class="payment_btn">공인인증안내</button>
+                    <button class="payment_btn">안전결제안내</button>
+                    <button class="payment_btn">안심클릭안내</button>
+                    <button class="payment_btn">해외발급카드안내</button>
+                </td>
+            </tr>
+        </table>
+
+    </section>
+</body>
+
+</html>
