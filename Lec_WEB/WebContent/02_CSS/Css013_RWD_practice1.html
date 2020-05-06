@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css013_RWD_practice1</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #clear {
+            clear: both;
+        }
+
+        [class*="col-"] {
+            float: left;
+            width: 100%;
+            min-height: 100px;
+            border: 10px solid white;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .content {
+            height: 400px;
+        }
+
+        .col-s-4 {
+            width: 33.33%;
+        }
+
+        @media screen and (min-width: 600px) {
+
+            .col-m-1 {
+                width: 8.33%;
+            }
+
+            .col-m-2 {
+                width: 16.66%;
+            }
+
+            .col-m-3 {
+                width: 25%;
+            }
+
+            .col-m-4 {
+                width: 33.33%;
+            }
+
+            .col-m-5 {
+                width: 41.66%;
+            }
+
+            .col-m-6 {
+                width: 50%;
+            }
+
+            .col-m-7 {
+                width: 58.33%;
+            }
+
+            .col-m-8 {
+                width: 66.66%;
+            }
+
+            .col-m-9 {
+                width: 75%;
+            }
+
+            .col-m-10 {
+                width: 83.33%;
+            }
+
+            .col-m-11 {
+                width: 91.66%;
+            }
+
+            .col-m-12 {
+                width: 100%;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .sidebar {
+                height: 400px;
+            }
+
+            .content {
+                height: 400px;
+            }
+
+            .right_1 {
+                height: 200px;
+                border-bottom: none;
+            }
+
+            .right_2 {
+                height: 200px;
+                border-top: none;
+            }
+        }
+
+        @media screen and (min-width:768px) {
+            .col-1 {
+                width: 8.33%;
+            }
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+
+            .sidebar {
+                height: 400px;
+            }
+
+            .content {
+                height: 400px;
+            }
+
+            .right_1 {
+                height: 133.33px;
+                border-bottom: 10px solid white;
+            }
+
+            .right_2 {
+                height: 133.33px;
+                border-top: 10px solid white;
+            }
+
+            .right_3 {
+                height: 133.33px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu col-m-2 col-4" style="background-color: #B4A7D6;"></div>
+    <div class="head col-m-10 col-8" style="background-color: #9900FF;"></div>
+    <div id="clear"></div>
+    <div class="sidebar col-m-2 col-2" style="background-color: #00FFFF;"></div>
+    <div class="content col-m-8 col-6" style="background-color: #ffffff; box-shadow: 0 0 0 1px black inset;"></div>
+    <div class="right_1 col-s-4 col-m-2 col-4" style="background-color: #FCE5CD;"></div>
+    <div class="right_2 col-s-4 col-m-2 col-4" style="background-color: #4DB6AC;"></div>
+    <div class="right_3 col-s-4 col-m-3 col-4" style="background-color: #F9CB9C;"></div>
+    <div class="foot col-m-9 col-12" style="background-color: #FFD966;"></div>
+</body>
+
+</html>
