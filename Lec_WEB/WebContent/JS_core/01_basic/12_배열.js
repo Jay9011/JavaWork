@@ -103,3 +103,23 @@ console.log(fruits.concat(["Lemon", "Banana"]));
 console.log(fruits.toString());
 fruits = fruits.concat(['Lemon', "Banana"])  //* 원본 변화
 console.log(fruits.toString())
+
+// 배열 데이터 중간을 삭제 하려면??
+fruits.splice(1, 3);
+console.log(fruits.toString());
+
+//! slice()
+// 배열의 일부분만 추출,//* 원본에는 영향 안줌
+console.log(fruits.slice(1, 3)); // 1부터 3전까지
+console.log(fruits.slice(1));   // 1부터 끝까지
+
+//* 배열의 원소는 어떠한 타입이어도 가능
+var arr = [10, 3.14, 'hello', null, undefined, function(a, b){return a + b;}];
+
+//* 배열의 원소가 배열일수도 있다!!! ---> 다차원 배열
+arr = [[10, 20],[30, 40],[50, 60]];
+// arr.length --> ?
+// for 문 사용하여 출력
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i].toString());
+}
