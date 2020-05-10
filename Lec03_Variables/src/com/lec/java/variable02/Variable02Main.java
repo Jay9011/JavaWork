@@ -27,6 +27,8 @@ public class Variable02Main {
 		System.out.println("long : " + Long.MIN_VALUE + " ~ " + Long.MAX_VALUE);
 		
 //		int num9 = 9876543210;
+		long num10 = 123;
+		System.out.println("num10 = " + num10);
 //		long num10 = 9876543210;	// The literal 9876543210 of type int is out of range
 		// 리터럴 : literal
 		// 	코드상에 직접 입력한 값들
