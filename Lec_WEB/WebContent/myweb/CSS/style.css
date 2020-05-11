@@ -1,0 +1,64 @@
+@font-face { font-family: 'Godo'; font-style: normal; font-weight: 400; src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff'); } @font-face { font-family: 'Godo'; font-style: normal; font-weight: 700; src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff'); } .godo * { font-family: 'Godo', sans-serif; }
+
+body {
+    background-color: #152840;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+}
+
+.clear {
+    clear: both;
+}
+.col_33 {
+    width: 33.32%;
+}
+.col_66 {
+    width: 66.64%;
+}
+
+#steam_top {
+    background-color: #0E1B2B;
+    min-height: 80px;
+    max-height: 105px;
+}
+
+#top_content {
+    padding: 20px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+#main_logo {
+    float: left;
+    width: 33.32%;
+}
+
+#steam_top .logo{
+    min-width: 37.08px;
+    min-height: 37.08px;
+    max-width: 65.38px;
+    max-height: 65.38px;
+    vertical-align: middle;
+}
+
+#steam_top .title{
+    color: white;
+    font-family: Godo, sans-serif;
+    font-size: 2em;
+    margin-left: 0.2em;
+    vertical-align: middle;
+}
+
+@media screen and (min-width:767px) and (max-width:1023px){
+}
+
+@media screen and (min-width:1024px){
+}

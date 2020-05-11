@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<title>AJAX</title>
+	<meta charset="UTF-8">
+	<title>AJAX</title>
 </head>
 <!--
 	■ 동기화 (Synchronous) 방식
@@ -45,26 +46,35 @@
 	7. 읽은 내용으로 화면을 업데이트 한다
 	
  -->
- <!-- 
- ※ 크롬의 경우 타 소스로의 AJAX 요청을 원천적으로 차단합니다.
- same-origin policy 정책
-  --> 
+<!-- 
+	※ 크롬의 경우 타 소스로의 AJAX 요청을 원천적으로 차단합니다.
+	same-origin policy 정책
+  -->
+
 <body>
 
-<div id="demo">
-<h2>AJAX XMLHttpRequest</h2>
-<button type="button" onclick="loadDoc()">Change Content</button>
-</div>
+	<div id="demo">
+		<h2>AJAX XMLHttpRequest</h2>
+		<button type="button" onclick="loadDoc()">Change Content</button>
+	</div>
 
-<script>
-var infoTxt = "https://www.w3schools.com/js/ajax_info.txt";
-function loadDoc() {
+	<script>
+		var url = "https://www.w3schools.com/js/ajax_info.txt";
+		function loadDoc() {
 
-	// TODO
+			var xhttp = new XMLHttpRequest();	// XHR
+			xhttp.onreadystatechange = function () {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById('demo').innerHTML =
+						this.responseText;
+				}
+			}
 
-}
-</script>
-<!-- 
+			xhttp.open('GET', url, true);
+			shttp.send();
+		}
+	</script>
+	<!-- 
 XMLHttpRequest object 의 메소드들
 
 open(method, url, async, user, psw) : request 에 대해 명시
@@ -81,7 +91,7 @@ send(string) : POST 방식으로 서버에 request 보냄
 setRequestHeader() : 
 
 -->
-<!-- 
+	<!-- 
 XMLHttpRequest object 의 property 들.
 
 1. onreadystatechange : 함수설정.  readyState 값이 바뀔때마다 호출됨.
@@ -107,23 +117,7 @@ XMLHttpRequest object 의 property 들.
 
  -->
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
