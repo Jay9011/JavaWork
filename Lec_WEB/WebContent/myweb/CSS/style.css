@@ -1,19 +1,40 @@
-@font-face { font-family: 'Godo'; font-style: normal; font-weight: 400; src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoM.woff') format('woff'); } @font-face { font-family: 'Godo'; font-style: normal; font-weight: 700; src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/godo/Godo/GodoB.woff') format('woff'); } .godo * { font-family: 'Godo', sans-serif; }
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 400; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype'); } 
+@font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 700; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype') } 
+@font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 300; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype'); } 
+
+* { font-family: 'NanumBarunGothic', 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
 
 body {
-    background-color: #152840;
+    background-color: #0E1B2B;
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/427b1273373023.5c0f499a1f60f.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: contain;
     margin: 0;
     padding: 0;
     border: none;
+    
 }
-
 header {
     margin: 0;
     padding: 0;
     border: none;
     width: 100%;
 }
-
+a, a:active, a:link, a:visited {
+    text-decoration: none;
+    color: #FFF;
+}
+ul, ol, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.float_right {
+    float: right;
+}
 .clear {
     clear: both;
 }
@@ -26,38 +47,125 @@ header {
 
 #steam_top {
     background-color: #0E1B2B;
-    min-height: 80px;
-    max-height: 105px;
 }
 
 #top_content {
-    padding: 20px;
     max-width: 1024px;
     margin: 0 auto;
 }
 
 #main_logo {
     float: left;
-    width: 33.32%;
+}
+#main_logo img {
+    min-height: 30px;
+    max-height: 60px;
+    min-width: 130px;
+    width: 100%;
+    max-width: 261px;
+    padding: 20px;
 }
 
-#steam_top .logo{
-    min-width: 37.08px;
-    min-height: 37.08px;
-    max-width: 65.38px;
-    max-height: 65.38px;
-    vertical-align: middle;
+#top_action {
+    position: relative;
+    right: 20px;
+    top:20px;
+    color: #26456d;
 }
-
-#steam_top .title{
+#header_download {
+    padding: 2px 7px;
+    font-size: 0.8em;
+    float: right;
     color: white;
-    font-family: Godo, sans-serif;
-    font-size: 2em;
-    margin-left: 0.2em;
-    vertical-align: middle;
+    background-color: #5c7e10;
+    border: 1px solid #5c7e10;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    cursor: pointer;
+    font-family: 'Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+}
+#top_action a{
+    font-size: 0.8em;
+    margin-top: 2px;
+    display: block;
+    float: right;
+    color: #30ACFF;
+    font-family: 'Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+}
+#menu_bar {
+    max-width: 768px;
+    margin: 30px auto;
+    background-color: #5a81b1;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+#menu_bar li {
+    float: left;
+    text-align: center;
+}
+#menu_bar li a, #menu_bar li a:visited {
+    text-decoration: none;
+    color: #FFF;
+    padding: 7px 10px;
+    display: inline-block;
+    width: 80px;
+    font-size: 16px;
+}
+#menu_bar li:hover {
+    background-color: #30ACFF;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
-@media screen and (min-width:767px) and (max-width:1023px){
+
+
+#info {
+    
+}
+#info .footer_content{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+#footer_logo_steam {
+    float: right;
+    padding-top: 2px;
+}
+#footer_logo {
+    float: left;
+    padding-top: 2px;
+}
+#footer_logo img {
+    height: 25px;
+    width: auto;
+    border: none;
+}
+#info .rule {
+    height: 8px;
+    border-top: 1px solid #363c44;
+}
+#footer_text {
+    float: left;
+    margin-left: 12px;
+    color: #8F98A0;
+    font-size: 12px;
+    line-height: 16px;
+}
+#info .valve_links {
+    margin-top: 8px;
+    float: left;
+    font-size: 13px;
+    color: #61686D;
+}
+@media screen and (min-width:767px){
 }
 
 @media screen and (min-width:1024px){

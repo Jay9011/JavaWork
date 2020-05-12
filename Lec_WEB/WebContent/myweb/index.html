@@ -14,23 +14,85 @@
 <body>
     <header id="steam_top">
         <div id="top_content">
-            <div id="main_logo">
-                <img class="logo col_33" src="images/globalheader_logo.png" alt="Steam" />
-                <span class="title">STEAM</span>
+            <div id="main_logo" class="col_33">
+                <!-- <div id="logo"> -->
+                <img src="images/header_logo.png" alt="Steam" />
+                <!-- </div> -->
             </div>
-            <div class="col_66">
-                <div id="header_download" class="download">
-                    <i class="fas fa-download"></i>
+            <div id="top_action">
+                <div class="float_right"><a href="">로그인</a></div>
+                <div class="float_right">　|　</div>
+                <div id="header_download">
+                    <i class="fas fa-download"></i>&nbsp;&nbsp;&nbsp;Steam 설치
                 </div>
             </div>
 
             <div class="clear"></div>
         </div>
     </header>
-    <nav></nav>
-    <section></section>
-    <section></section>
-    <footer></footer>
+    <nav id="menu_bar">
+        <ul>
+            <li><a href="">상점 홈</a></li>
+            <li><a href="">인기 제품</a></li>
+            <li><a href="">무료</a></li>
+            <li><a href="">커뮤니티</a></li>
+        </ul>
+        <div class="clear"></div>
+    </nav>
+    <div id="content">
+        <section></section>
+        <section></section>
+    </div>
+    <footer id="info">
+        <div class="footer_content">
+            <div class="rule"></div>
+            <div id="footer_logo_steam">
+                <img src="https://steamstore-a.akamaihd.net/public/images/v6/logo_steam_footer.png"
+                    alt="Valve Software"></div>
+            <div id="footer_logo">
+                <a href="http://www.valvesoftware.com" target="_blank" rel="noreferrer">
+                    <img src="https://steamstore-a.akamaihd.net/public/images/footerLogo_valve_new.png"
+                        alt="Valve Software">
+                </a>
+            </div>
+            <div id="footer_text">
+                <div>© 2020 Valve Corporation. All rights reserved. 모든 상표는 미국 및 기타 국가에서 해당하는 소유자의 재산입니다.</div>
+                <div>부가가치세 포함&nbsp;&nbsp;
+                    <a href="https://store.steampowered.com/privacy_agreement/?snr=1_44_44_" target="_blank"
+                        rel="noreferrer">개인정보 보호정책</a>
+                    &nbsp; | &nbsp;
+                    <a href="https://store.steampowered.com/legal/?snr=1_44_44_" target="_blank"
+                        rel="noreferrer">사용권</a>
+                    &nbsp; | &nbsp;
+                    <a href="https://store.steampowered.com/subscriber_agreement/?snr=1_44_44_" target="_blank"
+                        rel="noreferrer">Steam 이용 약관</a>
+                    &nbsp; | &nbsp;
+                    <a href="https://store.steampowered.com/steam_refunds/?snr=1_44_44_" target="_blank"
+                        rel="noreferrer">환불</a>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <br>
+            <div class="rule"></div>
+            <div class="valve_links">
+                <a href="http://www.valvesoftware.com/about.html" target="_blank" rel="noreferrer">Valve 정보</a>
+                &nbsp; | &nbsp;<a href="http://www.steampowered.com/steamworks/" target="_blank"
+                    rel="noreferrer">Steamworks</a>
+                &nbsp; | &nbsp;<a href="http://www.valvesoftware.com/jobs.html" target="_blank" rel="noreferrer">채용
+                    정보</a>
+                &nbsp; | &nbsp;<a href="https://partner.steamgames.com/steamdirect" target="_blank"
+                    rel="noreferrer">Steam 배포</a>
+                &nbsp; | &nbsp;<a href="https://store.steampowered.com/digitalgiftcards/?snr=1_44_44_" target="_blank"
+                    rel="noreferrer">기프트 카드</a>
+                &nbsp; | &nbsp;<a href="https://steamcommunity.com/linkfilter/?url=http://www.facebook.com/Steam"
+                    target="_blank" rel="noopener">
+                    <img src="https://steamstore-a.akamaihd.net/public/images/ico/ico_facebook.gif"> Steam</a>
+                &nbsp; | &nbsp;<a href="http://twitter.com/steam" target="_blank" rel="noreferrer">
+                    <img src="https://steamstore-a.akamaihd.net/public/images/ico/ico_twitter.gif"> @steam</a>
+            </div>
+        </div>
+    </footer>
+    <script src="JS/action.js"></script>
 </body>
 
 </html>
