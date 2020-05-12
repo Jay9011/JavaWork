@@ -1,0 +1,178 @@
+{
+    "success": 1,
+    "total_count": 70,
+    "err_msg": "",
+    "rgAppData": {
+        "1147560": {
+            "name": "Skul: The Hero Slayer",
+            "url_name": "Skul_The_Hero_Slayer",
+            "url": "https://store.steampowered.com/app/1147560/Skul_The_Hero_Slayer/",
+            "price": "<div class='discount_final_price'>\u20a9 19,000</div>",
+            "discount_block": "<div class='discount_block' data-price-final='1520000'><div class='discount_pct'>-20%</div><div class='discount_prices'><div class='discount_original_price'>\u20a9 19,000</div><div class='discount_final_price'>\u20a9 15,200</div></div></div>",
+            "small_thumbnail": "https://steamcdn-a.akamaihd.net/steam/apps/1147560/capsule_184x69.jpg?t=1588857284",
+            "regular_thumbnail": "https://steamcdn-a.akamaihd.net/steam/apps/1147560/header.jpg?t=1588857284",
+            "preview": [
+                "https://steamcdn-a.akamaihd.net/steam/apps/1147560/ss_44eae43480fa6d9c350bf6d1100e6d8dc911d8ee.600x338.jpg?t=1588857284",
+                "https://steamcdn-a.akamaihd.net/steam/apps/1147560/ss_c29cf7bfb3dfc5dd7ca0428f92c12a68c8c632cb.600x338.jpg?t=1588857284",
+                "https://steamcdn-a.akamaihd.net/steam/apps/1147560/ss_8e5a7aa752779386252ff5b7f45ed86f9cac07d7.600x338.jpg?t=1588857284",
+                "https://steamcdn-a.akamaihd.net/steam/apps/1147560/ss_eb69096a8d5b1febdf0b0374e1ce513c2b3549d9.600x338.jpg?t=1588857284"
+            ],
+            "released": "2020-02-19",
+            "tags": [
+                "액션",
+                "인디",
+                "액션 로그라이크",
+                "로그라이트",
+                "픽셀 그래픽"
+            ],
+            "os_windows": true,
+            "os_macos": true,
+            "os_linux": true,
+            "early_access": true,
+            "discount": true
+        },
+        "1057090": {
+            "name": "Ori and the Will of the Wisps",
+            "url_name": "Ori_and_the_Will_of_the_Wisps",
+            "url": "https://store.steampowered.com/app/1057090/Ori_and_the_Will_of_the_Wisps/",
+            "price": "<div class='discount_final_price'>\u20a9 15,500</div>",
+            "discount_block": "",
+            "small_thumbnail": "https://steamcdn-a.akamaihd.net/steam/apps/1057090/capsule_sm_120.jpg?t=1588789337",
+            "regular_thumbnail": "https://steamcdn-a.akamaihd.net/steam/apps/1057090/header.jpg?t=1588789337",
+            "preview": [
+                "https://steamcdn-a.akamaihd.net/steam/apps/1057090/ss_0cf0ec6681ae5771173790dbc99ddb3bf3b886ad.600x338.jpg?t=1588789337",
+                "https://steamcdn-a.akamaihd.net/steam/apps/1057090/ss_f8ac174b7949e89fe1939a7bd2c471785dee55f0.600x338.jpg?t=1588789337",
+                "https://steamcdn-a.akamaihd.net/steam/apps/1057090/ss_d3fd9f0084f168d94931c77fa2327295d15a1d78.600x338.jpg?t=1588789337",
+                "https://steamcdn-a.akamaihd.net/steam/apps/1057090/ss_4cebfde8002aba504eacc8f99dd69c666f23fcb5.600x338.jpg?t=1588789337"
+            ],
+            "released": "2020-03-11",
+            "tags": [
+                "귀여움",
+                "액션",
+                "메트로배니아",
+                "웅장한",
+                "사운드트랙",
+                "명작"
+            ],
+            "os_windows": true,
+            "os_macos": false,
+            "os_linux": false,
+            "early_access": false,
+            "discount": false
+        },
+        "1118010": {
+            "name": "Monster Hunter World: Iceborne",
+            "url_name": "Monster_Hunter_World_Iceborne",
+            "url": "https://store.steampowered.com/app/1118010/Monster_Hunter_World_Iceborne/",
+            "price": "<div class='discount_final_price'>\u20a9 46,500</div>",
+            "discount_block": "",
+            "small_thumbnail": "https://steamcdn-a.akamaihd.net/steam/apps/1118010/capsule_184x69.jpg?t=1586831465",
+            "regular_thumbnail": "https://steamcdn-a.akamaihd.net/steam/apps/1118010/header.jpg?t=1586831465",
+            "preview": [
+                "https://steamcdn-a.akamaihd.net/steam/apps/1118010/ss_bc64afab29b2c76b7c6fae7818a5d0414ac59488.600x338.jpg?t=1586831465",
+                "https://steamcdn-a.akamaihd.net/steam/apps/1118010/ss_9e388e1825a4f800ec5d4d5c9f97a4291b34632d.600x338.jpg?t=1586831465",
+                "https://steamcdn-a.akamaihd.net/steam/apps/1118010/ss_4d98c381f7038b0c0efe5e2425e2adaa30e2823f.600x338.jpg?t=1586831465",
+                "https://steamcdn-a.akamaihd.net/steam/apps/1118010/ss_4cc2e29d743e3399ada96efc71f21a2961e71efa.600x338.jpg?t=1586831465"
+            ],
+            "released": "2020-01-10",
+            "tags": [
+                "액션",
+                "멀티플레이어",
+                "협동",
+                "사냥",
+                "오픈 월드"
+            ],
+            "os_windows": true,
+            "os_macos": false,
+            "os_linux": false,
+            "early_access": false,
+            "discount": false
+        },
+        "546560": {
+            "name": "Half-Life: Alyx",
+            "url_name": "HalfLife_Alyx",
+            "url": "https://store.steampowered.com/app/546560/HalfLife_Alyx/",
+            "price": "<div class='discount_final_price'>\u20a9 61,000</div>",
+            "discount_block": "",
+            "small_thumbnail": "https://steamcdn-a.akamaihd.net/steam/apps/546560/capsule_184x69.jpg?t=1588704198",
+            "regular_thumbnail": "https://steamcdn-a.akamaihd.net/steam/apps/546560/header.jpg?t=1588704198",
+            "preview": [
+                "https://steamcdn-a.akamaihd.net/steam/apps/546560/ss_d61365e93f20ceb5a94a1e5b2811cf504cbfa303.600x338.jpg?t=1588704198",
+                "https://steamcdn-a.akamaihd.net/steam/apps/546560/ss_fe7066404a704aa20f7c6f251facb7aef2606bda.600x338.jpg?t=1588704198",
+                "https://steamcdn-a.akamaihd.net/steam/apps/546560/ss_6868ae1644628f857e7df4b72a00fdf506f79c7f.600x338.jpg?t=1588704198",
+                "https://steamcdn-a.akamaihd.net/steam/apps/546560/ss_4236773ab28112613bd7d4c6282331c861bc222a.600x338.jpg?t=1588704198"
+            ],
+            "released": "2020-03-24",
+            "tags": [
+                "명작",
+                "액션",
+                "VR",
+                "어드벤처",
+                "여주인공",
+                "공포"
+            ],
+            "os_windows": true,
+            "os_macos": false,
+            "os_linux": false,
+            "early_access": false,
+            "discount": false
+        },
+        "960170": {
+            "name": "DJMAX RESPECT V",
+            "url_name": "DJMAX_RESPECT_V",
+            "url": "https://store.steampowered.com/app/960170/DJMAX_RESPECT_V/",
+            "price": "<div class='discount_final_price'>\u20a9 49,800</div>",
+            "discount_block": "",
+            "small_thumbnail": "https://steamcdn-a.akamaihd.net/steam/apps/960170/capsule_184x69.jpg?t=1583975080",
+            "regular_thumbnail": "https://steamcdn-a.akamaihd.net/steam/apps/960170/header.jpg?t=1583975080",
+            "preview": [
+                "https://steamcdn-a.akamaihd.net/steam/apps/960170/ss_36e75f6ba736b11a3e3085992557cade3c48ae7c.600x338.jpg?t=1583975080",
+                "https://steamcdn-a.akamaihd.net/steam/apps/960170/ss_d1133dd8116c076e3488f0f07d0b18e5a6e72d45.600x338.jpg?t=1583975080",
+                "https://steamcdn-a.akamaihd.net/steam/apps/960170/ss_506b5515b6382c4aa0bf135eb00dcf2b9b8ab225.600x338.jpg?t=1583975080",
+                "https://steamcdn-a.akamaihd.net/steam/apps/960170/ss_d4a266df64345c4229e682ab68ab4e07dd599de7.600x338.jpg?t=1583975080"
+            ],
+            "released": "2020-03-12",
+            "tags": [
+                "캐주얼",
+                "액션",
+                "스포츠",
+                "리듬",
+                "음악",
+                "앞서 해보기"
+            ],
+            "os_windows": true,
+            "os_macos": false,
+            "os_linux": false,
+            "early_access": true,
+            "discount": false
+        },
+        "1100600": {
+            "name": "Football Manager 2020",
+            "url_name": "Football_Manager_2020",
+            "url": "https://store.steampowered.com/app/1100600/Football_Manager_2020/",
+            "price": "<div class='discount_final_price'>\u20a9 54,000</div>",
+            "discount_block": "<div class='discount_block' data-price-final='1520000'><div class='discount_pct'>-33%</div><div class='discount_prices'><div class='discount_original_price'>\u20a9 54,000</div><div class='discount_final_price'>\u20a9 36,180</div></div></div>",
+            "small_thumbnail": "https://steamcdn-a.akamaihd.net/steam/apps/1100600/capsule_184x69.jpg?t=1584981392",
+            "regular_thumbnail": "https://steamcdn-a.akamaihd.net/steam/apps/1100600/header.jpg?t=1584981392",
+            "preview": [
+                "https://steamcdn-a.akamaihd.net/steam/apps/1100600/ss_8d596467335211b4663e80ca36b7a48babf7fe1e.600x338.jpg?t=1584981392",
+                "https://steamcdn-a.akamaihd.net/steam/apps/1100600/ss_c567c0f4a942eed604a51c187530293e78200723.600x338.jpg?t=1584981392",
+                "https://steamcdn-a.akamaihd.net/steam/apps/1100600/ss_0d8f7a2d5ac31506bd3eee1c94bbcdf04a9347f2.600x338.jpg?t=1584981392",
+                "https://steamcdn-a.akamaihd.net/steam/apps/1100600/ss_0c16b3be42e2ad851c5372df28cd16d8dc4180df.600x338.jpg?t=1584981392"
+            ],
+            "released": "2019-11-19",
+            "tags": [
+                "시뮬레이션",
+                "스포츠",
+                "경영",
+                "축구",
+                "미식축구"
+            ],
+            "os_windows": true,
+            "os_macos": true,
+            "os_linux": false,
+            "early_access": false,
+            "discount": false
+        }
+    }
+}

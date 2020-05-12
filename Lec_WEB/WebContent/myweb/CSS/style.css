@@ -3,7 +3,9 @@
 @font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 700; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype') } 
 @font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 300; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype'); } 
 
-* { font-family: 'NanumBarunGothic', 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
+* { 
+    font-family: 'NanumBarunGothic', 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; 
+}
 
 body {
     background-color: #0E1B2B;
@@ -31,6 +33,9 @@ ul, ol, li {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+.border_non{
+    border: none;
 }
 .float_right {
     float: right;
@@ -85,7 +90,7 @@ ul, ol, li {
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
     cursor: pointer;
-    font-family: 'Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-family: 'Han Sans', 'NanumBarunGothic', 'Sans-serif';
 }
 #top_action a{
     font-size: 0.8em;
@@ -93,12 +98,12 @@ ul, ol, li {
     display: block;
     float: right;
     color: #30ACFF;
-    font-family: 'Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    font-family: 'Han Sans', 'NanumBarunGothic', 'Sans-serif';
 }
 #menu_bar {
     max-width: 768px;
     margin: 30px auto;
-    background-color: #5a81b1;
+    background-color: #26456d;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -111,7 +116,7 @@ ul, ol, li {
 }
 #menu_bar li a, #menu_bar li a:visited {
     text-decoration: none;
-    color: #FFF;
+    color: #30ACFF;
     padding: 7px 10px;
     display: inline-block;
     width: 80px;
@@ -125,11 +130,34 @@ ul, ol, li {
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
 }
+#menu_bar li a:hover{
+    color: white;
+}
+#menu_bar .search{
+    float: right;
+    border: 1px solid #26456d;
+    background-color: #152840;
+    padding: 2px;
+    margin: 3px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
 
-
-
-#info {
-    
+#menu_bar .search input,
+#menu_bar .search button {
+    background-color: #152840;
+    color: #FFF;
+}
+#menu_bar .search input {
+    margin: 2px 0px 2px 5px;
+    outline: none;
+}
+#menu_bar .search button {
+    margin: 2px 5px;
+    cursor: pointer;
 }
 #info .footer_content{
     max-width: 1024px;

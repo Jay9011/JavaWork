@@ -1,0 +1,85 @@
+#main_swiper {
+    position: relative;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+#main_swiper::before {
+    content: "";
+    display: block;
+    padding-top: 40%;
+}
+#swiper_wraper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.swiper-container {
+    width: 90%;
+    height: 100%;
+}
+.swiper-slide > a {
+    background-color: #15284050;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide .big_thum {
+    position: absolute;
+    width: 60%;
+    height: 63%;
+    background-image: url("https://steamcdn-a.akamaihd.net/steam/apps/1147560/header.jpg?t=1588857284");
+    background-size: contain;
+}
+.swiper-slide .appname {
+    position: absolute;
+    width: 58%;
+    height: 25%;
+    top: 65%;
+    left: 12px;
+    font-style: italic;
+    /*폰트크기는나중에JQuery로동적으로조정하도록*/
+    font-size: 2em;
+    animation: glow 2s ease-in-out infinite alternate;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+}
+@keyframes glow {
+    from {
+      text-shadow: 0 0 2px #30acff;
+    }
+    to {
+      text-shadow: 0 0 30px #30acff, 0 0 10px #30acff;
+    }
+}
+.swiper-slide .info {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    right: 0;
+}
+.swiper-slide .screenshot {
+    height: 51%;
+}
+.swiper-slide .screenshot div {
+    float: left;
+    width: 50%;
+    height: 50%;
+    vertical-align: middle;
+}
+.swiper-slide .screenshot div img {
+    width: 99%;
+}
+.swiper-slide .info .reason {
+    display: table;
+    height: 12%;
+    width: 100%;
+    text-align: center;
+}
+.swiper-slide .info .reason .default{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.3em;
+    font-weight: lighter;
+}

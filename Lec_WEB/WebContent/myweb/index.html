@@ -7,6 +7,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/728e028a62.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="JS/index.js"></script>
     <title>Steam에 오신 것을 환영합니다!</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
@@ -21,7 +24,7 @@
             </div>
             <div id="top_action">
                 <div class="float_right"><a href="">로그인</a></div>
-                <div class="float_right">　|　</div>
+                <div class="float_right"><span style="margin: auto 10px;">|</span></div>
                 <div id="header_download">
                     <i class="fas fa-download"></i>&nbsp;&nbsp;&nbsp;Steam 설치
                 </div>
@@ -32,17 +35,85 @@
     </header>
     <nav id="menu_bar">
         <ul>
-            <li><a href="">상점 홈</a></li>
-            <li><a href="">인기 제품</a></li>
+            <li><a href="index.html">상점 홈</a></li>
+            <li><a href="">앞서 해보기</a></li>
             <li><a href="">무료</a></li>
             <li><a href="">커뮤니티</a></li>
         </ul>
+        <div class="search">
+            <form action="https://store.steampowered.com/search/" method="get">
+                <input class="border_non" type="text" name="term">
+                <button class="border_non" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
         <div class="clear"></div>
     </nav>
     <div id="content">
-        <section></section>
+        <section id="main_swiper">
+            <div id="swiper_wraper">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="big_thum"></div>
+                                <div class="appname">Skul: The Hero Slayer</div>
+                                <div class="info">
+                                    <div class="screenshot">
+                                        <div><img
+                                                src="https://steamcdn-a.akamaihd.net/steam/apps/1147560/ss_44eae43480fa6d9c350bf6d1100e6d8dc911d8ee.600x338.jpg?t=1588857284"
+                                                alt=""></div>
+                                        <div><img
+                                                src="https://steamcdn-a.akamaihd.net/steam/apps/1147560/ss_c29cf7bfb3dfc5dd7ca0428f92c12a68c8c632cb.600x338.jpg?t=1588857284"
+                                                alt=""></div>
+                                        <div><img
+                                                src="https://steamcdn-a.akamaihd.net/steam/apps/1147560/ss_8e5a7aa752779386252ff5b7f45ed86f9cac07d7.600x338.jpg?t=1588857284"
+                                                alt=""></div>
+                                        <div><img
+                                                src="https://steamcdn-a.akamaihd.net/steam/apps/1147560/ss_eb69096a8d5b1febdf0b0374e1ce513c2b3549d9.600x338.jpg?t=1588857284"
+                                                alt=""></div>
+                                    </div>
+                                    <div class="reason">
+                                        <div class="default">판매중</div>
+                                    </div>
+                                    <div class="tags">
+                                        <div class="tag">액션</div>
+                                        <div class="tag">인디</div>
+                                        <div class="tag">액션 로그라이크</div>
+                                        <div class="tag">로그라이트</div>
+                                        <div class="tag">픽셀 그래픽</div>
+                                    </div>
+                                    <div class="addition">
+                                        <div class="price"></div>
+                                        <div class="platforms"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                        <div class="swiper-slide">Slide 10</div> -->
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
         <section></section>
     </div>
+    <nav id="menu_footer">
+
+    </nav>
     <footer id="info">
         <div class="footer_content">
             <div class="rule"></div>
