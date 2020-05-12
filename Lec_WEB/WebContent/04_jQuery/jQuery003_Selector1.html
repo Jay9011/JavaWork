@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<title>jQuery Selector</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
+    <meta charset="UTF-8">
+    <title>jQuery Selector</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
 
-// TODO
+        $(function () {
+            $("button").click(function () {
+                $("#test").hide();
+            });
+        });
 
-</script>
+    </script>
 </head>
 <!-- 
 기본적으로 jQuery Selector 는
@@ -33,17 +38,17 @@ https://api.jquery.com/category/selectors/
 https://api.jquery.com/button-selector/
 
  -->
- 
+
 <body>
 
-<h2>This is a heading</h2>
+    <h2>This is a heading</h2>
 
-<p>This is a paragraph.</p>
-<p id="test">This is another paragraph.</p>
+    <p>This is a paragraph.</p>
+    <p id="test">This is another paragraph.</p>
 
-<button>Click me</button>
+    <button>Click me</button>
 
-<!-- 
+    <!-- 
 https://www.w3schools.com/jquery/trysel.asp
 
 
@@ -111,4 +116,5 @@ $("*")
  -->
 
 </body>
+
 </html>

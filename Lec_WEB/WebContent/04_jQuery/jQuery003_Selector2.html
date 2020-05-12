@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<title>jQuery Selector</title>
-<style>
-  div {
-    background: yellow;
-    border: 1px solid #AAA;
-    width: 80px;
-    height: 80px;
-    margin: 0 5px;
-    float: left;
-  }
-  div.colored {
-    background: green;
-  }
-</style>
+  <meta charset="UTF-8">
+  <title>jQuery Selector</title>
+  <style>
+    div {
+      background: yellow;
+      border: 1px solid #AAA;
+      width: 80px;
+      height: 80px;
+      margin: 0 5px;
+      float: left;
+    }
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    div.colored {
+      background: green;
+    }
+  </style>
 
-<script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-// TODO
-
-</script>
+  <script>
+    // TODO
+  </script>
 </head>
+
 <body>
 
-<button id="run">Run</button>
- 
-<div></div>
-<div id="mover"></div>
-<div></div>
+  <button id="run">Run</button>
 
-<script>
+  <div></div>
+  <div id="mover"></div>
+  <div></div>
 
-// TODO
+  <script>
+    // animate 라는 selector 는
+    // 현재 anumation 중인 element 에 적용
+    $("#run").click(function () {
+      $("div:animated").toggleClass("colored");
+    });
+    function animateIt() {
+      $("#mover").slideToggle("slow", animateIt);
+    }
+    animateIt();
 
-</script>
+  </script>
 
 </body>
+
 </html>
