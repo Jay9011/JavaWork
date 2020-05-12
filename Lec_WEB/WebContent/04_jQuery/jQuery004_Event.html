@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<title>jQuery Event</title>
-<style>
-p {
-	background-color: cyan;
-	padding: 3px;
-}
-</style>
+	<meta charset="UTF-8">
+	<title>jQuery Event</title>
+	<style>
+		p {
+			background-color: cyan;
+			padding: 3px;
+		}
+	</style>
 </head>
 <!-- 
 	다양한 이벤트들
@@ -40,85 +41,137 @@ p {
 	
 	
 	$("p").click(function(){
-	  // action goes here!!
+	  / action goes here!!
 	});
 	
 	jQuery 이벤트 함수의 매개변수가 '함수' 임에 유의
  -->
- 
- <!--
+
+<!--
  이벤트 함수들
  $(document).ready()    :  
  
  -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- 
+
 <script>
- 
-$(document).ready(function(){
 
-	// 클릭하면(click())사라지게 하기
-	// TODO
-	
-	// 더블클릭하면(dblclick()) 
-	// 사라졌던게 나타나기
-	// TODO
-	
-	// 마우스 올려놓으면 (mouseenter())
-	// TODO
-	
-	// 마우스 올려져 있다가 나가면 (mouseleave())
-	// TODO
-	
-	
-	// 마우스 눌려지면 (mousedown())
-	// TODO
-	
-	// 마우스 눌렸다 떼지면 (mouseup())
-	// TODO
-	
-	// hover(func1, func2)  : mouseenter 와 mouseleave 롤 동시에 처리
-	// 마우스가 들어오면 배경색 노랑색으로
-	// 마우스가 나가면 배경색 cyan 색으로
-	// TODO
-	
-	// focus() 되면
-	// 배경색을 노랑색으로 바꾸세요.
-	// TODO
-	
-	// blur() 되면
-	// 배경색을 다시 하얀색으로 바꾸기
-	// TODO
-	
-	// on(이벤트, func)
-	// on({이벤트1:func1, 이벤트2:func2, ... }) 여러 이벤트 핸들러 지정
-	// TODO
-	
-    // TODO
-    
- 	// off() 는 해당 element 의 특정 이벤트 제거
-    // TODO
-}); 
+	$(document).ready(function () {
+
+		// 클릭하면(click())사라지게 하기
+		$("p#p01").click(function () {
+			// hide() : 숨기기
+			$(this).hide();
+		});
+
+		// 더블클릭하면(dblclick()) 
+		// 사라졌던게 나타나기
+		$("p#p02").dblclick(function () {
+			// slideDown() : 슬라이드 효과를 내며 나타나기
+			$("p#p01").slideDown();
+		});
+
+		// 마우스 올려놓으면 (mouseenter())
+		$("p#p03").mouseenter(function () {
+			// html() : html을 바꾸는 함수
+			$(this).html("<b>mouse가</b> 올려짐")
+		});
+
+		// 마우스 올려져 있다가 나가면 (mouseleave())
+		$("p#p04").mouseleave(function () {
+			// text() : text를 바꾸는 함수
+			$(this).text("마우스 빠짐");
+		});
+		$("p#p04").mouseenter(function () {
+			// text() : text를 바꾸는 함수
+			$(this).text("마우스 들어옴");
+		});
+
+		// 마우스 눌려지면 (mousedown())
+		$("p#p05").mousedown(function () {
+			// css() : css를 바꾸는 함수
+			$(this).css("color", "red");
+		});
+
+		// 마우스 눌렸다 떼지면 (mouseup())
+		$("p#p06").mouseup(function () {
+			// attr() : attribute 바꾸는 함수
+			$("#img").attr("src", "../img/example_img_girl.jpg");
+		});
+
+		// hover(func1, func2)  : mouseenter 와 mouseleave 롤 동시에 처리
+		// 마우스가 들어오면 배경색 노랑색으로
+		// 마우스가 나가면 배경색 cyan 색으로
+		$("p#p07").hover(
+			function () {
+				// mouseenter 일 때
+				$(this).css("background-color", "yellow");
+			}
+			, function () {
+				// mouseleave 일 때
+				$(this).css("background-color", "cyan");
+			});
+
+		// focus() 되면
+		// 배경색을 노랑색으로 바꾸세요.
+		$("input#p08").focus(function () {
+			$(this).css("background-color", "yellow");
+			// val() : value 값을 바꾸는 함수
+			$(this).val("focus됨.");
+		});
+
+		// blur() 되면
+		// 배경색을 다시 하얀색으로 바꾸기
+		$("input#p08").blur(function () {
+			$(this).css("background-color", "#FFF");
+			// val() : value 값을 바꾸는 함수
+			$(this).val("");
+		});
+
+
+		// on(이벤트, func)
+		// on({이벤트1:func1, 이벤트2:func2, ... }) 여러 이벤트 핸들러 지정
+		$("p#p09").on("click", function () {
+			$(this).css("background-color", "yellow");
+		});
+
+		$("p#p10").on({
+			mouseenter: function () {
+				$(this).css("background-color", "tomato");
+			}
+			, mouseleave: function () {
+				$(this).css("background-color", "cyan");
+			}
+			, click: function () {
+				$(this).css("background-color", "yellow");
+			}
+		});
+
+		// off() 는 해당 element 의 특정 이벤트 제거
+		$("#btnOff").click(function () {
+			$("p#p10").off("click");
+		});
+	}); 
 </script>
- 
+
 <body>
-<p id="p01">p01 click</p>
-<p id="p02">p02 dblclick</p>
-<p id="p03">p03 mouseenter</p>
-<p id="p04">p04 mouseleave</p>
-<p id="p05">p05 mousedown</p>
-<p id="p06">p06 mouseup
-	<img id="img" src="">
-</p>
-<p id="p07">p07 hover</p>
-focus & blur: p08 <input id="p08"/></br>
-<p id="p09">p09 on</p>
-<p id="p10">p10 on</p>
+	<p id="p01">p01 click</p>
+	<p id="p02">p02 dblclick</p>
+	<p id="p03">p03 mouseenter</p>
+	<p id="p04">p04 mouseleave</p>
+	<p id="p05">p05 mousedown</p>
+	<p id="p06">p06 mouseup
+		<img id="img" src="">
+	</p>
+	<p id="p07">p07 hover</p>
+	focus & blur: p08 <input id="p08" /></br>
+	<p id="p09">p09 on</p>
+	<p id="p10">p10 on</p>
 
-<button id="btnOff">btnOff 클릭 이벤트 제거</button>
+	<button id="btnOff">btnOff 클릭 이벤트 제거</button>
 
 
-<!-- 
+	<!-- 
 	on(), off()
 	
 	과거에는
@@ -130,32 +183,7 @@ focus & blur: p08 <input id="p08"/></br>
 	jQuery 도 deprecated 된 함수나 객체들 많다.  레퍼런스를 참조하자
  -->
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
