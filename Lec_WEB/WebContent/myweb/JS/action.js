@@ -8,3 +8,10 @@ let logoUrl = $("#main_logo");
 logoUrl.click(function(){
     $(location).attr("href", "index.html")
 });
+
+let searchBar = $("#menu_footer .search");
+let searchIco = $("#footer_search");
+
+searchIco.click(function(){
+    searchBar.toggle("fast");
+});
