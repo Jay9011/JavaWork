@@ -7,9 +7,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/728e028a62.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/form.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <script src="JS/index.js"></script>
     <title>Steam에 오신 것을 환영합니다!</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
@@ -48,51 +47,55 @@
         </div>
         <div class="clear"></div>
     </nav>
-    <section id="main_swiper">
-        <div id="swiper_wraper">
-            <!-- Swiper -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
+    <section id="loginbox">
+        <div class="inner_loginbox">
+            <div class="loginbox_content">
+                <h2>로그인</h2>
+                <div class="worn">
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+                <form id="login_form" name="login" action="https://www.w3schools.com/action_page.php" method="GET">
+                    <div class="login_row">
+                        <div class="input_title">Steam 계정 이름</div>
+                        <input id="input_username" class="text_input" type="text" name="username" value="">
+                    </div>
+                    <div class="login_row">
+                        <div class="input_title">비밀번호</div>
+                        <input id="input_password" class="text_input" type="password" name="password">
+                    </div>
+                </form>
             </div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="btn_box">
+                <div id="login_btn_signin">
+                    <button id="login" class="btnv6_blue_hoverfade btn_medium">
+                        <span>로그인</span>
+                    </button>
+                </div>
+            </div>
         </div>
+        <div class="line"></div>
+        <div class="inner_loginbox">
+            <div class="loginbox_content">
+                <h2>계정 만들기</h2>
+                <p>새 무료 계정</p>
+                <br>
+                <p>
+                    자유롭게 참가하고 쉽게 이용할 수 있습니다.Steam 계정을 만들어 PC 그리고 Mac 게이머들을 위한 선두적인 디지털 솔루션인 Steam을 이용해 보세요. </p>
+                <div class="nonresponsive_hidden">
+                    <br>
+                    <p>
+                        <a target="_top" href="https://store.steampowered.com/about">Steam에 대해 자세히 알아보세요.</a>
+                    </p>
+                </div>
+            </div>
+            <div class="btn_box">
+                <a href="join.html" target="" class="btnv6_blue_hoverfade btn_medium">
+                    <span>Steam 가입</span>
+                </a>
+            </div>
+        </div>
+        <div class="clear"></div>
     </section>
-    <script src="JS/swiper_list.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <section>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
     </section>
 
     <nav id="menu_footer">
@@ -106,7 +109,7 @@
             <div class="icon_link">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.082 13.082"
-                    style="enable-background:new 0 0 13.082 13.082; fill: #30acff;" xml:space="preserve">
+                    style="enable-background:new 0 0 13.082 13.082;" xml:space="preserve">
                     <path d="M4.303,10.075L3.016,9.578c0.172,0.691,0.796,1.203,1.541,1.203c0.877,0,1.589-0.711,1.589-1.589
 			c0-0.876-0.712-1.588-1.589-1.588c-0.316,0-0.61,0.093-0.857,0.252l1.271,0.49c0.477,0.185,0.715,0.721,0.531,1.198
 			C5.317,10.022,4.781,10.261,4.303,10.075z" />
@@ -233,6 +236,7 @@
         </div>
     </footer>
     <script src="JS/action.js"></script>
+    <script src="JS/form.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,94 @@
+#loginbox {
+    max-width: 800px;
+    background-color: #152840;
+    padding: 20px 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: #c6d4df;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+#loginbox .line {
+    border: 1px solid #45556c;
+}
+#loginbox .worn {
+    padding: 10px;
+}
+.inner_loginbox {
+    max-width: 600px;
+    margin: 40px auto;
+}
+.login_row {
+    margin: 20px 0;
+}
+.loginbox_content h2 {
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 10px;
+    background-color: #5a81b1;
+    border: 1px solid #5a81b1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.loginbox_content input[type=text], 
+.loginbox_content input[type=password] {
+    background-color: rgba( 0, 0, 0, 0.2 );
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0px #45556c;
+    padding: 5px;
+    margin: 4px 0;
+    width: 80%;
+}
+.btnv6_blue_hoverfade {
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #67c1f5 !important;
+    background: rgba( 103, 193, 245, 0.2 );
+}
+.btn_box {
+    margin: 20px 0;
+}
+.btn_medium {
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 30px;
+}
+#loginbox .note {
+    color: #B3B3B3;
+    font-size: 0.8em;
+}
+#join_form .agree_box{
+    overflow: scroll;
+    height: 200px;
+    border: 1px solid #000;
+}
+.worn_box {
+    border: 1px solid rgb(255, 153, 0) !important;
+    padding: 10px !important;
+}
+.error_box {
+    border : 1px solid red !important;
+    color: #dc3c3c !important;
+    font-weight: bold !important;
+}
+.agree {
+    margin-top: 10px;
+}
+#agree_check {
+    vertical-align: middle;
+}

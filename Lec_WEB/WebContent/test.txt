@@ -1,1 +1,48 @@
-git Test 중...
+<div class="swiper-slide">
+<a href="">
+        <div class="big_thum"></div>
+        <div class="appname">Skul: The Hero Slayer</div>
+        <div class="info">
+            <div class="screenshot">
+                <div><img
+                        src="https://steamcdn-a.akamaihd.net/steam/apps/1147560/ss_44eae43480fa6d9c350bf6d1100e6d8dc911d8ee.600x338.jpg?t=1588857284"
+                        alt=""></div>
+                <div><img
+                        src="https://steamcdn-a.akamaihd.net/steam/apps/1147560/ss_c29cf7bfb3dfc5dd7ca0428f92c12a68c8c632cb.600x338.jpg?t=1588857284"
+                        alt=""></div>
+                <div><img
+                        src="https://steamcdn-a.akamaihd.net/steam/apps/1147560/ss_8e5a7aa752779386252ff5b7f45ed86f9cac07d7.600x338.jpg?t=1588857284"
+                        alt=""></div>
+                <div><img
+                        src="https://steamcdn-a.akamaihd.net/steam/apps/1147560/ss_eb69096a8d5b1febdf0b0374e1ce513c2b3549d9.600x338.jpg?t=1588857284"
+                        alt=""></div>
+            </div>
+            <div class="reason">
+                <div class="default">판매중</div>
+            </div>
+            <div class="tags">
+                <div class="tag">액션</div>
+                <div class="tag">인디</div>
+                <div class="tag">액션 로그라이크</div>
+                <div class="tag">로그라이트</div>
+                <div class="tag">픽셀 그래픽</div>
+            </div>
+            <div class="addition">
+                <div class="price">
+                    <div class='discount_block' data-price-final='1520000'>
+                        <div class='discount_pct'>-20%</div>
+                        <div class='discount_prices'>
+                            <div class='discount_original_price'>₩ 19,000</div>
+                            <div class='discount_final_price'>₩ 15,200</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="platforms">
+                    <img src="images/icon_platform_win.png" alt="">
+                    <img src="images/icon_platform_mac.png" alt="">
+                    <img src="images/icon_platform_linux.png" alt="">
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

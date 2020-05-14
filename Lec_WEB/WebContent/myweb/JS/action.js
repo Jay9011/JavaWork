@@ -3,3 +3,8 @@ let download = document.getElementById("header_download");
 download.addEventListener("click", function(){
     location.href = download_link;
 });
+
+let logoUrl = $("#main_logo");
+logoUrl.click(function(){
+    $(location).attr("href", "index.html")
+});

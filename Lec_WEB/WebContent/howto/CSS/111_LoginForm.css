@@ -1,3 +1,121 @@
 @charset "UTF-8";
 
-/* TODO */
+/* Model */
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    overflow: auto;
+    padding-top: 60px;
+    display: none;
+}
+
+/* 모달 팝업 안의 form */
+.modal-content {
+    background-color: #fefefe;
+    width: 80%;
+    margin: 5px auto;
+    border: 1px solid #888;
+}
+
+.imgcontainer {
+    text-align: center; /* 이미지 중앙 정렬 */
+    margin: 24px 0 12px 0;  /* 바깥여백 */
+    position: relative;
+}
+
+/* 닫기 버튼 */
+.close {
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+    /* position 설정하여 우상단으로 배치 */
+    position: absolute;
+    right: 25px;
+    top: 0;
+}
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+img.avatar {
+    /* 원래이미지크기의40% */
+    width: 40%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+/* form */
+.container {
+    padding: 16px;
+}
+input[type=text], input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    display: inline-block;
+    box-sizing: border-box;
+}
+/* 버튼 기본 스타일 */
+button {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    margin: 8px 0;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.8;
+}
+.cancelbtn {
+    /* 내부 담는 content 만큼 auto */
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+/* 380px 이하 화면에서 RWD */
+@media screen and (max-width: 380px){
+    .cancelbtn{
+        width: 100%;
+    }
+    span.psw {
+        float: none;
+        display: block;
+    }
+}
+/* 애니메이션 zoom 효과 */
+.animate {
+    animation: zoom 0.6s;
+    -webkit-animation: zoom 0.6s;
+}
+@keyframes zoom {
+    from {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}

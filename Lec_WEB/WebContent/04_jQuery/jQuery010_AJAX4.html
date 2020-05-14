@@ -64,12 +64,14 @@
 			$.ajax({
 				url: "http://www.juso.go.kr/addrlink/addrLinkApiJsonp.do"  //인터넷망
 				, type: "POST"
-				, data: {	// post request 에 필요한 parameter
-					currentPage: $("#form").find("[name='currentPage']").val()
-					, countPerPage: $("#form").find("[name='countPerPage']").val()
-					, confmKey: $("#form").find("[name='confmKey']").val()
-					, keyword: $("#form").find("[name='keyword']").val()
-				}
+				, data: $("#form").serialize()	// form 의 데이터를 한번에 object 화 하기
+
+				// , data: {	// post request 에 필요한 parameter
+				// 	currentPage: $("#form").find("[name='currentPage']").val()
+				// 	, countPerPage: $("#form").find("[name='countPerPage']").val()
+				// 	, confmKey: $("#form").find("[name='confmKey']").val()
+				// 	, keyword: $("#form").find("[name='keyword']").val()
+				// }
 				, dataType: "jsonp"	// Cross-domain 문제 해결용 (JSON with Padding)
 				, crossDomain: true
 

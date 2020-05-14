@@ -21,16 +21,16 @@
     height: 100%;
 }
 .swiper-slide > a {
-    background-color: #15284050;
     display: block;
     width: 100%;
     height: 100%;
+    background-color: #152840;
+    opacity: 0.9;
 }
 .swiper-slide .big_thum {
     position: absolute;
     width: 60%;
     height: 63%;
-    background-image: url("https://steamcdn-a.akamaihd.net/steam/apps/1147560/header.jpg?t=1588857284");
     background-size: contain;
 }
 .swiper-slide .appname {
@@ -82,4 +82,58 @@
     vertical-align: middle;
     font-size: 1.3em;
     font-weight: lighter;
+}
+.swiper-slide .info .tags {
+    padding: 5px;
+    height: 28px;
+    overflow: hidden;
+}
+.swiper-slide .info .tags .tag {
+    display: inline-block;
+    padding: 3px 5px;
+    margin: 2px;
+    border: 1px solid #30acff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: #30acff;
+}
+.swiper-slide .info .addition {
+    position: relative;
+    width: 100%;
+}
+.swiper-slide .info .addition .price {
+    margin-top: 3%;
+    margin-left: auto;
+    width: 180px;
+}
+.swiper-slide .info .addition .price .discount_pct {
+    display: block;
+    float: left;
+    color: #a4d007;
+    background: #4c6b22;
+    font-size: 25px;
+    padding: 2px 5px;
+    height: 30px;
+}
+.swiper-slide .info .addition .price .discount_prices{
+    display: block;
+    background-color: #0e1b2b;
+    padding: 2px 5px;
+    height: 30px;
+}
+.swiper-slide .info .addition .price .discount_original_price{
+    text-align: right;
+    font-size: .5em;
+    color: #888;
+    text-decoration: line-through;
+}
+.swiper-slide .info .addition .price .discount_final_price{
+    text-align: right;
+    font-size: 1em;
+}
+.swiper-slide .info .addition .platforms {
+    float: right;
 }
