@@ -16,4 +16,15 @@ $(document).ready(function () {
           disableOnInteraction: false
         },
       })
+
+      $("#swiper_wraper .screenshot img").hover(function(){
+        var imgViewer = $(this).parents("a").find(".big_thum");
+        var html = `<img id="previmg" src="${$(this).attr("src")}"/>`;
+        $(this).css({"opacity": "0.5"});
+        imgViewer.append(html);
+      }, function(){
+        var imgViewer = $(this).parents("a").find(".big_thum");
+        imgViewer.empty();
+        $(this).css({"opacity": "1"});
+      });
   });

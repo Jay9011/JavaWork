@@ -48,7 +48,7 @@
     box-shadow: 1px 1px 0px #45556c;
     padding: 5px;
     margin: 4px 0;
-    width: 80%;
+    width: 95%;
 }
 .btnv6_blue_hoverfade {
     border-radius: 2px;
@@ -64,9 +64,13 @@
     margin: 20px 0;
 }
 .btn_medium {
+    display: block;
+    margin: 0 auto;
     padding: 0 15px;
     font-size: 15px;
     line-height: 30px;
+    width: 90%;
+    text-align: center;
 }
 #loginbox .note {
     color: #B3B3B3;
@@ -91,4 +95,12 @@
 }
 #agree_check {
     vertical-align: middle;
+}
+
+@media screen and (min-width:767px){
+    .btn_medium {
+        display: inline-block;
+        width: auto;
+        text-align: left;
+    }
 }

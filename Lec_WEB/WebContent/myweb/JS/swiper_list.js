@@ -10,18 +10,19 @@ $.getJSON('./json/news.json', function(data){
         for(i = 0; i < item.preview.length; i++){
             html += `<div><img src="${item.preview[i]}" alt=""></div>`;
         }
-        if(item.discount) {
-            html += `</div><div class="reason"><div class="default" style="color:#a4d007; font-weight: bold;">할인 행사중!!!</div></div>`;
-        } else if(item.early_access){
-            html += `</div><div class="reason"><div class="default">앞서 해보기</div></div>`;
-        } else {
-            html += `</div><div class="reason"><div class="default">판매중</div></div>`;
-        }
+        html += '</div>'
         html += '<div class="tags">'
         for(i = 0; i < item.tags.length; i++){
             html += `<div class="tag">${item.tags[i]}</div>`;
         }
         html += '</div>';
+        if(item.discount) {
+            html += `<div class="reason"><div class="default" style="color:#a4d007; font-weight: bold;">할인 행사중!!!</div></div>`;
+        } else if(item.early_access){
+            html += `<div class="reason"><div class="default">앞서 해보기</div></div>`;
+        } else {
+            html += `<div class="reason"><div class="default">판매중</div></div>`;
+        }
         html += '<div class="addition"><div class="price">';
         if(item.discount){
             html += item.discount_block;

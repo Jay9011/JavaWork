@@ -1,12 +1,8 @@
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-@font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 400; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype'); } 
-@font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 700; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype') } 
-@font-face { font-family: 'NanumBarunGothic'; font-style: normal; font-weight: 300; src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot'); src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype'); } 
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 * { 
-    font-family: 'NanumBarunGothic', 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; 
+    font-family: 'Nanum Gothic', 'Noto Sans KR', 'Sans-serif'; 
 }
-
 body {
     background-color: #0E1B2B;
     background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/427b1273373023.5c0f499a1f60f.gif");
@@ -84,11 +80,10 @@ ul, ol, li {
 }
 #top_action a {
     font-size: 1.5em;
-    margin-top: 2px;
     display: block;
     float: right;
     color: #30ACFF;
-    font-family: 'Han Sans', 'NanumBarunGothic', 'Sans-serif';
+    font-family: 'Noto Sans KR', 'Nanum Gothic', 'Sans-serif';
     transition: font-size 1s;
     -webkit-transition: font-size 1s;
     -moz-transition: font-size 1s;
@@ -99,7 +94,7 @@ ul, ol, li {
     fill: #30ACFF;
     width: 1em;
     height: 1em;
-    vertical-align: text-top;
+    vertical-align: middle;
 }
 #top_action a:hover {
     opacity: 0.8;
@@ -244,16 +239,19 @@ ul, ol, li {
     margin: 2px 0px 2px 0;
     outline: none;
     padding-left: 25px;
-    width: 80%;
+    width: 70%;
 }
 #menu_footer .search button {
+    display: block;
+    float: right;
     margin: 2px 0;
+    margin-right: 10px;
     cursor: pointer;
     width: 15%;
     padding: 0;
 }
 #menu_footer .search button i {
-    font-size: 2em;
+    font-size: 1.5em;
     vertical-align: middle;
 }
 #info {
@@ -311,11 +309,14 @@ ul, ol, li {
         -ms-border-radius: 2px;
         -o-border-radius: 2px;
         cursor: pointer;
-        font-family: 'Han Sans', 'NanumBarunGothic', 'Sans-serif';
+        font-family: 'Noto Sans KR', 'Nanum Gothic', 'Sans-serif';
         display:block;
     }
     #header_line {
         display: block;
+        border-left: 1px solid #5a81b1;
+        height: 2em;
+        margin: 0 10px;
     }
     #top_action a{
         font-size: 1.2em;
@@ -329,8 +330,10 @@ ul, ol, li {
         margin: 30px auto;
     }
     #menu_footer {
-        /* display: none; */
         height: 0px;
+    }
+    #menu_footer .search {
+        display: none;
     }
     #info {
         margin-bottom: 50px;
@@ -338,4 +341,7 @@ ul, ol, li {
 }
 
 @media screen and (min-width:1024px){
+    #menu_footer .search {
+        display: none;
+    }
 }

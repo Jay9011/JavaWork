@@ -7,7 +7,7 @@
 #main_swiper::before {
     content: "";
     display: block;
-    padding-top: 40%;
+    padding-top: 85%;
 }
 #swiper_wraper {
     position: absolute;
@@ -15,6 +15,10 @@
     right: 0;
     bottom: 0;
     left: 0;
+}
+#swiper_wraper .swiper-button-next,
+#swiper_wraper .swiper-button-prev {
+    display: none;
 }
 .swiper-container {
     width: 90%;
@@ -28,22 +32,27 @@
     opacity: 0.9;
 }
 .swiper-slide .big_thum {
-    position: absolute;
-    width: 60%;
-    height: 63%;
+    position: static;
+    width: 100%;
+    height: 50%;
     background-size: contain;
+    background-repeat: no-repeat;
+}
+#previmg {
+    width: 100%;
+    height: 100%;
 }
 .swiper-slide .appname {
-    position: absolute;
-    width: 58%;
-    height: 25%;
-    top: 65%;
-    left: 12px;
+    position: static;
+    padding: 10px;
+    /* height: 22px; */
+    height: 5vw;
     font-style: italic;
-    /*폰트크기는나중에JQuery로동적으로조정하도록*/
-    font-size: 2em;
+    /* font-size: 18px; */
+    font-size: 5vw;
     animation: glow 2s ease-in-out infinite alternate;
     -webkit-animation: glow 2s ease-in-out infinite alternate;
+    overflow: hidden;
 }
 @keyframes glow {
     from {
@@ -54,44 +63,34 @@
     }
 }
 .swiper-slide .info {
-    position: absolute;
-    width: 40%;
-    height: 100%;
-    right: 0;
+    position: static;
+    padding: 0 10px;
 }
 .swiper-slide .screenshot {
-    height: 51%;
-}
-.swiper-slide .screenshot div {
-    float: left;
-    width: 50%;
-    height: 50%;
-    vertical-align: middle;
-}
-.swiper-slide .screenshot div img {
-    width: 99%;
+    display: none;
 }
 .swiper-slide .info .reason {
-    display: table;
-    height: 12%;
-    width: 100%;
-    text-align: center;
+    display: block;
+    text-align: right;
 }
 .swiper-slide .info .reason .default{
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 1.3em;
+    /* font-size: 14px; */
+    font-size: 4vw;
     font-weight: lighter;
 }
 .swiper-slide .info .tags {
-    padding: 5px;
-    height: 28px;
+    padding: 5px 0;
+    /* height: 14px; */
+    height: 6vw;
+    text-align: right;
     overflow: hidden;
 }
 .swiper-slide .info .tags .tag {
     display: inline-block;
-    padding: 3px 5px;
-    margin: 2px;
+    /* font-size: 10px; */
+    font-size: 2.5vw;
+    padding: 1px 4px;
+    margin: 0 2px;
     border: 1px solid #30acff;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -107,33 +106,157 @@
 .swiper-slide .info .addition .price {
     margin-top: 3%;
     margin-left: auto;
-    width: 180px;
+    /* width: 180px; */
+    width: 45vw;
 }
 .swiper-slide .info .addition .price .discount_pct {
     display: block;
     float: left;
     color: #a4d007;
     background: #4c6b22;
-    font-size: 25px;
+    /* font-size: 25px; */
+    font-size: 7vw;
     padding: 2px 5px;
-    height: 30px;
+    /* height: 30px; */
+    height: 8vw;
 }
 .swiper-slide .info .addition .price .discount_prices{
     display: block;
     background-color: #0e1b2b;
     padding: 2px 5px;
-    height: 30px;
+    /* height: 30px; */
+    height: 8vw;
 }
 .swiper-slide .info .addition .price .discount_original_price{
     text-align: right;
-    font-size: .5em;
+    /* font-size: .5em; */
+    font-size: 2vw;
     color: #888;
     text-decoration: line-through;
 }
 .swiper-slide .info .addition .price .discount_final_price{
     text-align: right;
-    font-size: 1em;
+    /* font-size: 1em; */
+    font-size: 4vw;
 }
 .swiper-slide .info .addition .platforms {
     float: right;
+}
+.swiper-slide .info .addition .platforms img{
+    /* width: 15px; */
+    width: 4vw;
+}
+
+@media screen and (min-width:767px){
+    #main_swiper::before {
+        content: "";
+        display: block;
+        padding-top: 40%;
+    }
+    #swiper_wraper .swiper-button-next,
+    #swiper_wraper .swiper-button-prev {
+        display: block;
+    }
+    .swiper-slide .big_thum {
+        position: absolute;
+        width: 60%;
+        height: 63%;
+        background-size: contain;
+    }
+    .swiper-slide .appname {
+        position: absolute;
+        width: 58%;
+        height: 25%;
+        top: 65%;
+        left: 12px;
+        font-family: 'Noto Sans KR', 'Nanum Gothic', 'Sans-serif';
+        font-style: italic;
+        font-size: 2em;
+        font-weight: 600;
+        animation: glow 2s ease-in-out infinite alternate;
+        -webkit-animation: glow 2s ease-in-out infinite alternate;
+    }
+    .swiper-slide .info {
+        position: absolute;
+        width: 40%;
+        height: 100%;
+        right: 0;
+        padding: 0;
+    }
+    .swiper-slide .screenshot {
+        display: block;
+        height: 51%;
+    }
+    .swiper-slide .screenshot div {
+        float: left;
+        width: 50%;
+        height: 50%;
+        vertical-align: middle;
+    }
+    .swiper-slide .screenshot div img {
+        width: 99%;
+    }
+    .swiper-slide .info .reason {
+        display: table;
+        height: 12%;
+        width: 100%;
+        text-align: center;
+    }
+    .swiper-slide .info .reason .default{
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 20px;
+        font-weight: lighter;
+    }
+    .swiper-slide .info .tags {
+        padding: 4px;
+        height: 10%;
+        overflow: hidden;
+    }
+    .swiper-slide .info .tags .tag {
+        display: inline-block;
+        padding: 3px 5px;
+        margin: 5px 2px 100px 2px;
+        font-size: 16px;
+        vertical-align: middle;
+    }
+    .swiper-slide .info .addition {
+        width: 97%;
+    }
+    .swiper-slide .info .addition .price {
+        margin-top: 3%;
+        margin-left: auto;
+        width: 200px;
+    }
+    .swiper-slide .info .addition .price .discount_pct {
+        display: block;
+        float: left;
+        color: #a4d007;
+        background: #4c6b22;
+        font-size: 30px;
+        padding: 2px 5px;
+        height: 37px;
+    }
+    .swiper-slide .info .addition .price .discount_prices{
+        display: block;
+        background-color: #0e1b2b;
+        padding: 2px 5px;
+        height: 37px;
+    }
+    .swiper-slide .info .addition .price .discount_original_price{
+        text-align: right;
+        font-size: 0.7em;
+        color: #888;
+        text-decoration: line-through;
+    }
+    .swiper-slide .info .addition .price .discount_final_price{
+        text-align: right;
+        font-size: 1.2em;
+    }
+    .swiper-slide .info .addition .platforms img{
+        width: 20px;
+    }
+}
+
+@media screen and (min-width:1024px){
 }
