@@ -5,26 +5,23 @@ function gameListPrev(){
         $(this).addClass("selected");
         $(this).siblings().removeClass("selected");
   
-        $.getJSON('./json/datas.json', function(data){
-          var $items = data.rgAppData;
-          var thisObject = $items[itemId];
-          var imgs = thisObject.preview;
-          $.each(imgViewer, function(index, item){
-            item.src = imgs[index];
-          });
-          var recommend = thisObject.recommand;
-          if(thisObject.value > 3){
-            $("#evaluation").css("color","#30acff").text(recommend);
-          }else if(thisObject.value = 2){
-            $("#evaluation").css("color","#B9A074").text(recommend);
-          }else {
-            $("#evaluation").css("color","#A34C25").text(recommend);
-          }
+        var $items = datasJson.rgAppData;
+        var thisObject = $items[itemId];
+        var imgs = thisObject.preview;
+        $.each(imgViewer, function(index, item){
+          item.src = imgs[index];
         });
+        var recommend = thisObject.recommand;
+        if(thisObject.value > 3){
+          $("#evaluation").css("color","#30acff").text(recommend);
+        }else if(thisObject.value = 2){
+          $("#evaluation").css("color","#B9A074").text(recommend);
+        }else {
+          $("#evaluation").css("color","#A34C25").text(recommend);
+        }
     });
   }
-$.getJSON('./json/news.json', function(data){
-    var $items = data.news;
+    var $items = newsJson.news;
     var gameList = $("#gameList #listLeft");
     for(i = 0; i < $items.length; i++){
         var html = '<a id="' + $items[i].id + '" class="item" href="' + $items[i].url + '">';
@@ -61,4 +58,3 @@ $.getJSON('./json/news.json', function(data){
         gameList.append(html);
     }
     gameListPrev();
-});

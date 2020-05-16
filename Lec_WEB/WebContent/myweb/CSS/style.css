@@ -543,9 +543,9 @@ ul, ol, li {
         position: relative;
     }
     #flyshow {
-        position: fixed;
+        position: relative;
         padding: 0 10px 0 30px;
-        max-width: 380px;
+        max-width: 365px;
     }
     #flyshow .title{
         text-align: center;

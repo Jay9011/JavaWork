@@ -7,7 +7,7 @@ $(document).ready(function(){
     
     let logoUrl = $("#main_logo");
     logoUrl.click(function(){
-        $(location).attr("href", "index.html");
+        $(location).attr("href", "indexCORS.html");
     });
     
     let searchBar = $("#menu_footer .search");

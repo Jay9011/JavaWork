@@ -148,7 +148,9 @@
     /* width: 15px; */
     width: 4vw;
 }
-
+#gameList .title {
+    color: #30acff;
+}
 @media screen and (min-width:767px){
     #main_swiper::before {
         padding-top: 40%;

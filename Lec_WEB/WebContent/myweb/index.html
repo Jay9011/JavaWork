@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/728e028a62.js" crossorigin="anonymous"></script>
-    <!-- <script type="text/javascript" src="json/news.json"></script> -->
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/index.css">
     <!-- <link rel="stylesheet" href="CSS/swiper.min.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <script src="JS/index.js"></script>
     <title>Steam에 오신 것을 환영합니다!</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <header id="steam_top">
+        <!-- top_content 삽입 부분 -->
         <div id="top_content">
             <div id="main_logo" class="col_33">
                 <!-- <div id="logo"> -->
@@ -38,20 +37,20 @@
                     </a></div>
                 <div id="header_line" class="float_right"></div>
                 <div id="header_download">
-                    <i class="fas fa-download"></i>&nbsp;&nbsp;&nbsp;Steam 설치
+                    <i class="fas fa-download"></i>&nbsp;Steam 설치
                 </div>
             </div>
-
             <div class="clear"></div>
         </div>
     </header>
     <div class="padding_30"></div>
     <nav id="menu_bar">
+        <!-- menu_container 삽입 부분 -->
         <div class="menu_container">
             <ul>
                 <li><a href="index.html">상점 홈</a></li>
-                <li><a href="">추천 게임</a></li>
-                <li><a href="">무료 게임</a></li>
+                <li><a href="recommeded.html">추천 게임</a></li>
+                <li><a href="free.html">무료 게임</a></li>
                 <li><a href="https://steamcommunity.com/">커뮤니티</a></li>
             </ul>
             <div class="search">
@@ -81,9 +80,9 @@
     </section>
     <script src="JS/swiper_list.js"></script>
     <!-- <script src="JS/swiper.min.js"></script> -->
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <div style="margin: 70px;"></div>
     <section id="gameList">
+        <p class="title">인기 신제품</p>
         <article id="listLeft">
         </article>
         <article id="rightShow">
@@ -109,8 +108,8 @@
         <div class="clear"></div>
         <script src="JS/gamelist.js"></script>
     </section>
-
     <nav id="menu_footer">
+        <!-- menu_footer 삽입 부분 -->
         <div class="search">
             <form action="https://store.steampowered.com/search/" method="get">
                 <input class="border_non" type="text" name="term" placeholder="타이틀 검색">
@@ -138,7 +137,7 @@
                 </svg>
             </div>
         </a>
-        <a href="" target="">
+        <a href="recommeded.html" target="">
             <div class="icon_link">
                 <svg id="Layer_1" enable-background="new 0 0 480.004 480.004" height="512" viewBox="0 0 480.004 480.004"
                     width="512" xmlns="http://www.w3.org/2000/svg">
@@ -148,7 +147,7 @@
                 </svg>
             </div>
         </a>
-        <a href="" target="">
+        <a href="free.html" target="">
             <div class="icon_link">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
@@ -202,6 +201,7 @@
         </div>
     </nav>
     <footer id="info">
+        <!-- footer_info 삽입 부분 -->
         <div class="footer_content">
             <div class="rule"></div>
             <div id="footer_logo_steam">
@@ -250,6 +250,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="JS/action.js"></script>
 </body>
 

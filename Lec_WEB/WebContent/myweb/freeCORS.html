@@ -9,12 +9,10 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/index.css">
     <!-- <link rel="stylesheet" href="CSS/swiper.min.css"> -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
     <title>Steam에 오신 것을 환영합니다!</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <script src="json/notice_json.js"></script>
-    <script src="json/datas_json.js"></script>
-    <script src="json/news_json.js"></script>
+    <script src="json/free_json.js"></script>
 </head>
 
 <body>
@@ -67,49 +65,78 @@
     </nav>
     <div class="padding_30"></div>
     <div class="menu-empty"></div>
-    <section id="main_swiper">
-        <div id="swiper_wraper">
-            <!-- Swiper -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </section>
-    <script src="JS/swiper_listCORS.js"></script>
-    <div style="margin: 70px;"></div>
-    <section id="gameList">
-        <p class="title">인기 신제품</p>
+    <!-- <section id="main_swiper"> -->
+    <!-- <div id="swiper_wraper"> -->
+    <!-- <div class="swiper-container"> -->
+    <!-- <div class="swiper-wrapper"> -->
+    <!-- </div> -->
+    <!-- <div class="swiper-pagination"></div> -->
+    <!-- </div> -->
+    <!-- <div class="swiper-button-next"></div> -->
+    <!-- <div class="swiper-button-prev"></div> -->
+    <!-- </div> -->
+    <!-- </section> -->
+    <!-- <script src="JS/swiper_list.js"></script> -->
+    <!-- <script src="JS/swiper.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
+    <section id="gameList2">
         <article id="listLeft">
+
         </article>
+        <script src="JS/freelistCORS.js"></script>
+        <script src="JS/reload.js"></script>
         <article id="rightShow">
-            <div id="preview">
-                <div class="content">
-                    <div class="info">
-                        <div class="item_id"></div>
-                        <div class="value">
-                            <p class="text">전반적인 사용자 평가 : </p>
-                            <div id="evaluation" style="color: #30acff;">선택되지 않음</div>
+            <div id="flyshow">
+                <div class="title">
+                    스포트라이트
+                </div>
+                <div class="info">
+                    <a href="https://store.steampowered.com/app/440900/Conan_Exiles/?snr=1_1510_4__40">
+                        <img src="https://steamcdn-a.akamaihd.net/steam/spotlights/c38e0f0f40eb7016a3502dbb/spotlight_image_english.jpg?t=1589403012"
+                            alt="">
+                        <div class="content">
+                            <h1>주말 무료 플레이</h1>
+                            <p>2020년 5월 19일 오전 2시 00분까지 무료로 플레이하세요.</p>
+                            <p>할인 혜택은 2020년 5월 26일 오전 2시 00분에 종료됩니다.</p>
                         </div>
+                        <div class="discount_block">
+                            <div class="discount_pct">-50%</div><div class="discount_prices"><div class="discount_original_price">₩ 45,000</div><div class="discount_final_price">₩ 22,500</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="title">
+                    추천 특별 할인
+                </div>
+                <div class="best">
+                    <div class="item">
+                        <a href="https://store.steampowered.com/app/552520/Far_Cry_5/?snr=1_4_4__tab-Specials_9">
+                            <img src="https://steamcdn-a.akamaihd.net/steam/apps/552520/capsule_184x69.jpg?t=1575655495"
+                                alt="">
+                            <div class="discount_block">
+                                <div class="discount_pct">-75%</div><div class="discount_prices"><div class="discount_original_price">₩ 65,000</div><div class="discount_final_price">₩ 16,250</div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="preview">
-                        <img src="https://www.geeky-gadgets.com/wp-content/uploads/2019/09/Steam-library-beta.jpg"
-                            alt="" class="img1" />
-                        <img src="images/no.png" alt="" class="img2" />
-                        <img src="images/no.png" alt="" class="img3" />
-                        <img src="images/no.png" alt="" class="img4" />
+                    <div class="item">
+                        <a href="https://store.steampowered.com/app/433340/Slime_Rancher/?snr=1_2300_4__104_2">
+                            <img src="https://steamcdn-a.akamaihd.net/steam/apps/433340/capsule_184x69_alt_assets_3.jpg?t=1586456962"
+                                alt="">
+                            <div class="discount_block">
+                                <div class="discount_pct">-60%</div><div class="discount_prices"><div class="discount_original_price">₩ 21,000</div><div class="discount_final_price">₩ 8,400</div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </article>
-        <div class="clear"></div>
-        <script src="JS/gamelistCORS.js"></script>
     </section>
+    <section>
+    </section>
+
+    <div class="clear"></div>
     <nav id="menu_footer">
         <!-- menu_footer 삽입 부분 -->
         <div class="search">
@@ -122,7 +149,7 @@
             <div class="icon_link">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.082 13.082"
-                    style="enable-background:new 0 0 13.082 13.082; fill: #30acff;" xml:space="preserve">
+                    style="enable-background:new 0 0 13.082 13.082;" xml:space="preserve">
                     <path d="M4.303,10.075L3.016,9.578c0.172,0.691,0.796,1.203,1.541,1.203c0.877,0,1.589-0.711,1.589-1.589
 			c0-0.876-0.712-1.588-1.589-1.588c-0.316,0-0.61,0.093-0.857,0.252l1.271,0.49c0.477,0.185,0.715,0.721,0.531,1.198
 			C5.317,10.022,4.781,10.261,4.303,10.075z"></path>
@@ -153,7 +180,7 @@
             <div class="icon_link">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
-                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    style="enable-background:new 0 0 512 512; fill: #30acff;" xml:space="preserve">
                     <path d="M208,208h-16v32h16c8.832,0,16-7.168,16-16C224,215.168,216.832,208,208,208z"></path>
                     <path d="M480,64H32C14.368,64,0,78.368,0,96v320c0,17.664,14.368,32,32,32h448c17.664,0,32-14.336,32-32V96
 			C512,78.368,497.664,64,480,64z M112,240c8.832,0,16,7.168,16,16c0,8.832-7.168,16-16,16H96v48c0,8.832-7.168,16-16,16
@@ -252,8 +279,8 @@
             </div>
         </div>
     </footer>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="JS/actionCORS.js"></script>
+    <script src="JS/spotlight.js"></script>
 </body>
 
 </html>
