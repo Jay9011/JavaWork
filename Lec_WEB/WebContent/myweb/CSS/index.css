@@ -77,6 +77,7 @@
     /* font-size: 14px; */
     font-size: 4vw;
     font-weight: lighter;
+    color: #30acff;
 }
 .swiper-slide .info .tags {
     padding: 5px 0;
@@ -91,13 +92,14 @@
     font-size: 2.5vw;
     padding: 1px 4px;
     margin: 0 2px;
-    border: 1px solid #30acff;
+    border: 1px solid #0e1b2b;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    background-color: #30acff;
+    background-color: #0e1b2b;
+    color: #5a81b1;
 }
 .swiper-slide .info .addition {
     position: relative;
@@ -149,8 +151,6 @@
 
 @media screen and (min-width:767px){
     #main_swiper::before {
-        content: "";
-        display: block;
         padding-top: 40%;
     }
     #swiper_wraper .swiper-button-next,
@@ -161,7 +161,6 @@
         position: absolute;
         width: 60%;
         height: 63%;
-        background-size: contain;
     }
     .swiper-slide .appname {
         position: absolute;
@@ -170,11 +169,8 @@
         top: 65%;
         left: 12px;
         font-family: 'Noto Sans KR', 'Nanum Gothic', 'Sans-serif';
-        font-style: italic;
         font-size: 2em;
         font-weight: 600;
-        animation: glow 2s ease-in-out infinite alternate;
-        -webkit-animation: glow 2s ease-in-out infinite alternate;
     }
     .swiper-slide .info {
         position: absolute;
@@ -206,15 +202,12 @@
         display: table-cell;
         vertical-align: middle;
         font-size: 20px;
-        font-weight: lighter;
     }
     .swiper-slide .info .tags {
         padding: 4px;
         height: 10%;
-        overflow: hidden;
     }
     .swiper-slide .info .tags .tag {
-        display: inline-block;
         padding: 3px 5px;
         margin: 5px 2px 100px 2px;
         font-size: 16px;
@@ -224,33 +217,19 @@
         width: 97%;
     }
     .swiper-slide .info .addition .price {
-        margin-top: 3%;
-        margin-left: auto;
         width: 200px;
     }
     .swiper-slide .info .addition .price .discount_pct {
-        display: block;
-        float: left;
-        color: #a4d007;
-        background: #4c6b22;
         font-size: 30px;
-        padding: 2px 5px;
         height: 37px;
     }
     .swiper-slide .info .addition .price .discount_prices{
-        display: block;
-        background-color: #0e1b2b;
-        padding: 2px 5px;
         height: 37px;
     }
     .swiper-slide .info .addition .price .discount_original_price{
-        text-align: right;
         font-size: 0.7em;
-        color: #888;
-        text-decoration: line-through;
     }
     .swiper-slide .info .addition .price .discount_final_price{
-        text-align: right;
         font-size: 1.2em;
     }
     .swiper-slide .info .addition .platforms img{

@@ -15,3 +15,16 @@ let searchIco = $("#footer_search");
 searchIco.click(function(){
     searchBar.toggle("fast");
 });
+
+let menubar = $("#menu_bar");
+let menuOffset = menubar.offset();
+$(window).scroll(function(){
+    let scrollT = $(window).scrollTop();
+    if(scrollT > menuOffset.top + 25) {
+        menubar.css({"position" : "fixed", "top" : "0px", "max-width" : "100%", "width" : "100%", "animation" : "sizeUp 0.5s", "-webkit-animation" : "sizeUp 0.5s"});
+        $(".menu-empty").css("display", "block");
+    } else {
+        menubar.css({"position" : "static", "max-width" : "768px", "animation" : "", "-webkit-animation" : ""});
+        $(".menu-empty").css("display", "none");
+    }
+});

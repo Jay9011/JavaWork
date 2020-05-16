@@ -1,4 +1,4 @@
-{
+news = {
     "success": 1,
     "total_count": 70,
     "err_msg": "",

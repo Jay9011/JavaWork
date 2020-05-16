@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 * { 
@@ -99,11 +100,20 @@ ul, ol, li {
 #top_action a:hover {
     opacity: 0.8;
 }
+.padding_30 {
+    padding: 0px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
 #menu_bar {
     visibility: hidden;
+    z-index: 999;
     opacity: 0;
-    /*display: none;
-    */max-width: 768px;
+    /*display: none;*/
+    max-width: 768px;
     margin: 0px auto;
     background-color: #26456d;
     border-radius: 4px;
@@ -152,7 +162,6 @@ ul, ol, li {
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
 }
-
 #menu_bar .search input,
 #menu_bar .search button {
     background-color: #152840;
@@ -165,6 +174,111 @@ ul, ol, li {
 #menu_bar .search button {
     margin: 2px 5px;
     cursor: pointer;
+}
+#gameList {
+    max-width: 950px;
+}
+#listLeft {
+    width: 100%;
+    float: left;
+    background-color: #0E1B2B;
+    opacity: 0.9;
+}
+#listLeft .item {
+    display: block;
+    position: relative;
+    background: #0e1b2b;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #26456d;
+}
+#listLeft .item:hover {
+    opacity: 0.8;
+}
+#listLeft .item_thum {
+    position: relative;
+    left: 0;
+    top: 0;
+    float: left;
+    width: 100%;
+    z-index: 3;
+    line-height: 70px;
+    margin-right: 10px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+#listLeft .item_thum img {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+#listLeft .item_content {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    padding-top: 5px;
+    font-size: 12px;
+}
+#listLeft .item_name {
+    display: block;
+    color: #ffffff;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    height: 1.2em;
+    overflow: hidden;
+}
+#listLeft .item_tags {
+    color: #5a81b1;
+    height: 16px;
+    white-space: normal;
+    overflow: hidden;
+}
+#listLeft .price {
+    display: block;
+    position: relative;
+    clear: both;
+}
+#listLeft .discount_pct {
+    display: block;
+    position: absolute;
+    text-align: right;
+    color: #a4d007;
+    background: #4c6b22;
+    right: 0;
+    bottom: 0;
+}
+#listLeft .discount_prices {
+    display: block;
+    text-align: right;
+    float: right;
+    bottom: 8px;
+    right: 0;
+}
+#listLeft .discount_original_price {
+    color: #5a81b1;
+    font-size: 11px;
+    text-decoration: line-through;
+}
+#listLeft .discount_final_price {
+    color: #30acff;
+    font-size: 17px;
+    width: 100px;
+    float: right;
+    text-align: right;
+}
+#gameList .item:hover {
+    background-color: #26456d;
+    opacity: 1;
+}
+#rightShow {
+    display: none;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 #menu_footer {
     position: fixed;
@@ -295,6 +409,9 @@ ul, ol, li {
 #main_logo {
     cursor: pointer;
 }
+#rightShow {
+    display: none;
+}
 @media screen and (min-width:767px){
     #header_download {
         padding: 2px 7px;
@@ -324,10 +441,27 @@ ul, ol, li {
     #top_action a svg {
         display: none;
     }
+    .padding_30 {
+        padding: 30px;
+    }
     #menu_bar {
         visibility: visible;
         opacity: 1;
-        margin: 30px auto;
+        height: 33px;
+    }
+    .menu-empty {
+        height: 33px;
+        display: none;
+    }
+    @keyframes sizeUp {
+        from {
+            left:50%;
+            margin-left: -384px;
+        }
+        to {
+            left: 0px;
+            margin-left: 0px;
+        }
     }
     #menu_footer {
         height: 0px;
@@ -338,10 +472,164 @@ ul, ol, li {
     #info {
         margin-bottom: 50px;
     }
+    #listLeft {
+        width: 60%;
+    }
+    #listLeft .item {
+        height: 72px;
+    }
+    #listLeft .item_thum {
+        width: 155px;
+        height: 100%;
+    }
+    #rightShow {
+        width: 40%;
+        float: right;
+    }
+    #listLeft .price {
+        height: 100%;
+        float: right;
+        clear: none;
+    }
+    #listLeft .discount_pct {
+        display: block;
+        position: relative;
+        text-align: right;
+        color: #a4d007;
+        background: #4c6b22;
+        float: right;
+    }
+    #listLeft .discount_prices {
+        position: absolute;
+    }
+    #rightShow {
+        display: block;
+    }
+    #preview {
+        width: 95%;
+        height: 100%;
+        margin: 0 auto;
+        background-color: #26456d;
+    }
+    #preview .content{
+        padding: 10px;
+    }
+    #preview .info {
+        padding: 10px;
+        background-color: #0e1b2b;
+        margin-bottom: 5px;
+    }
+    #preview .item_id {
+        display: none;
+    } 
+    #preview p.text {
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+        color: #5a81b1;
+    }
+    #evaluation {
+        margin-left: 50px;
+        font-family: 'Noto Sans KR', 'Nanum Gothic', 'Sans-serif';
+    }
+    #preview .preview img {
+        width: 100%;
+    }
+    #listLeft .selected{
+        background-color: #26456d;
+        opacity: 1;
+    }
+    #rightShow {
+        position: relative;
+    }
+    #flyshow {
+        position: fixed;
+        padding: 0 10px 0 30px;
+        max-width: 380px;
+    }
+    #flyshow .title{
+        text-align: center;
+        font-size: 20px;
+        color: #30acff;
+    }
+    #flyshow .info {
+        text-align: center;
+        padding: 20px;
+        border: 10px solid #0E1B2B;
+        background-color: rgb(14, 27, 43, 0.8);
+        margin-bottom: 15px;
+    }
+    #flyshow .info img {
+        width: 90%;
+        animation: glowImg 2s ease-in-out infinite alternate;
+        -webkit-animation: glowImg 2s ease-in-out infinite alternate;
+    }
+    @keyframes glowImg {
+        from {
+            box-shadow: 0 0 0px 0px #30acff, 0 0 0px 0px #30acff;
+        }
+        to {
+            box-shadow: 0 0 18px 3px #30acff, 0 0 6px 1px #30acff;
+        }
+    }
+    #flyshow .info .content {
+        text-align: left;
+    }
+    #flyshow .info .content p {
+        font-size: 14px;
+        color: #5a81b1;
+    }
+    #flyshow .discount_block {
+        position: relative;
+    }
+    #flyshow .discount_pct {
+        color: #a4d007;
+        background: #4c6b22;
+        display: inline-block;
+        line-height: 34px;
+        font-size: 16px;
+    }
+    #flyshow .discount_prices {
+        display: inline-block;
+        vertical-align: bottom;
+        text-align: right;
+        line-height: 13px;
+        padding: 4px 10px 4px 7px;
+        background-color: #000;
+    }
+    #flyshow .discount_original_price {
+        text-decoration: line-through;
+        color: #626366;
+        font-size: 11px;
+    }
+    #flyshow .discount_final_price {
+        color: #30acff;
+        font-size: 13px;
+    }
+    #flyshow .best {
+        margin-top: 15px;
+    }
+    #flyshow .item {
+        display: inline-block;
+        width: 45%;
+        margin: 0 auto;
+        background-color: rgb(14, 27, 43, 0.8);
+        border: 5px solid #0E1B2B;
+    }
+    #flyshow .item img {
+        width: 100%;
+    }
+    #flyshow .item .discount_block {
+        float: right;
+    }
 }
 
 @media screen and (min-width:1024px){
     #menu_footer .search {
         display: none;
+    }
+    .menu_container {
+        max-width: 1024px;
+        margin: 0 auto;
     }
 }
