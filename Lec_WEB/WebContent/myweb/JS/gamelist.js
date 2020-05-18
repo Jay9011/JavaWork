@@ -5,7 +5,7 @@ function gameListPrev(){
         $(this).addClass("selected");
         $(this).siblings().removeClass("selected");
   
-        $.getJSON('./json/datas.json', function(data){
+        $.getJSON('json/datas.json', function(data){
           var $items = data.rgAppData;
           var thisObject = $items[itemId];
           var imgs = thisObject.preview;
@@ -23,7 +23,7 @@ function gameListPrev(){
         });
     });
   }
-$.getJSON('./json/news.json', function(data){
+$.getJSON('json/news.json', function(data){
     var $items = data.news;
     var gameList = $("#gameList #listLeft");
     for(i = 0; i < $items.length; i++){

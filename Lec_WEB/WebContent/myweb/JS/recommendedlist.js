@@ -1,6 +1,6 @@
 var counter = 0;
 function addList(){
-    $.getJSON('./json/recommend.json', function(data){
+    $.getJSON('json/recommend.json', function(data){
         var items = data.recommend;
         var gameList = $("#gameList2 #listLeft");
         var html = "";

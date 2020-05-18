@@ -33,7 +33,7 @@ $(function(){
       });
     }
   // swiper 에 값 넣기
-  $.getJSON('./json/notice.json', function(data){
+  $.getJSON('json/notice.json', function(data){
       var $items = data.notice;
       var swiper = $(".swiper-wrapper");
       // txt = $items[1147560].name;

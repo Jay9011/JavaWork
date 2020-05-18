@@ -1,6 +1,6 @@
 var counter = 0;
 function addList(){
-    $.getJSON('./json/free.json', function(data){
+    $.getJSON('json/free.json', function(data){
         var items = data.free;
         var gameList = $("#gameList2 #listLeft");
         var html = "";
