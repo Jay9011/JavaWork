@@ -60,7 +60,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector URIEncoding="UTF-8" connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -153,7 +153,12 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="JSP_Hello" path="/JSP_Hello" reloadable="true" source="org.eclipse.jst.jee.server:JSP_Hello"/><Context docBase="JSP02_ServletBasic" path="/JSP02_ServletBasic" reloadable="true" source="org.eclipse.jst.jee.server:JSP02_ServletBasic"/><Context docBase="JSP03_ServletGetPost" path="/JSP03_ServletGetPost" reloadable="true" source="org.eclipse.jst.jee.server:JSP03_ServletGetPost"/><Context docBase="JSP04_ServletLifeCycle" path="/JSP04_ServletLifeCycle" reloadable="true" source="org.eclipse.jst.jee.server:JSP04_ServletLifeCycle"/><Context docBase="JSP05_ServletForm" path="/JSP05_ServletForm" reloadable="true" source="org.eclipse.jst.jee.server:JSP05_ServletForm"/></Host>
+		<Context docBase="JSP02_ServletBasic" path="/JSP02_ServletBasic" reloadable="true" source="org.eclipse.jst.jee.server:JSP02_ServletBasic"/>
+	<Context docBase="JSP03_ServletGetPost" path="/JSP03_ServletGetPost" reloadable="true" source="org.eclipse.jst.jee.server:JSP03_ServletGetPost"/>
+	<Context docBase="JSP04_ServletLifeCycle" path="/JSP04_ServletLifeCycle" reloadable="true" source="org.eclipse.jst.jee.server:JSP04_ServletLifeCycle"/>
+	<Context docBase="JSP05_ServletForm" path="/JSP05_ServletForm" reloadable="true" source="org.eclipse.jst.jee.server:JSP05_ServletForm"/>
+	<Context docBase="JSP06_ServletInitParam" path="/JSP06_ServletInitParam" reloadable="true" source="org.eclipse.jst.jee.server:JSP06_ServletInitParam"/>
+	<Context docBase="JSP07_ServletContext" path="/JSP07_ServletContext" reloadable="true" source="org.eclipse.jst.jee.server:JSP07_ServletContext"/><Context docBase="JSP08_TagDirective" path="/JSP08_TagDirective" reloadable="true" source="org.eclipse.jst.jee.server:JSP08_TagDirective"/></Host>
     </Engine>
   </Service>
 </Server>
