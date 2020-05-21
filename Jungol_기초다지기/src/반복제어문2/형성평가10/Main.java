@@ -24,14 +24,22 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		int dan = sc.nextInt();
 		int num = sc.nextInt();
-		
 		for (int i = 1; i <= 9; i++) {
-			for (int j = 0; j < num; j++) {
-				System.out.printf("%d * %d = %2d   ", dan-j, i, ((dan-j)*i));
+			int j = dan;
+			while(true) {
+				System.out.printf("%d * %d = %2d   ", j, i, j * i);
+				if(j == num) {
+					break;
+				}
+				if(dan > num) {
+					j--;
+				} else {
+					j++;
+				}
 			}
 			System.out.println();
 		}
-		
+
 		sc.close();
 	}
 }

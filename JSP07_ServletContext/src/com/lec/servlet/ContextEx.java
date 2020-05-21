@@ -15,6 +15,16 @@ public class ContextEx extends HttpServlet {
         super();
     }
 
+    @Override
+    public void init() throws ServletException {
+    	System.out.println("Init() 실행!");
+    }
+
+    @Override
+    public void destroy() {
+    	System.out.println("destroy() 종료준비!");
+    }
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("App START~~");
 	}

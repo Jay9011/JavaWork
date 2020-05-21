@@ -25,15 +25,14 @@
 					"@dbeaver-use-rule-hint@": "false",
 					"@dbeaver-use-meta-optimizer@": "false"
 				},
-				"auth-model": "oracle_native",
-				"handlers": {}
+				"auth-model": "oracle_native"
 			}
 		}
 	},
 	"connection-types": {
 		"dev": {
 			"name": "Development",
-			"color": "255,255,255",
+			"color": "81,86,88",
 			"description": "Regular development database",
 			"auto-commit": true,
 			"confirm-execute": false,

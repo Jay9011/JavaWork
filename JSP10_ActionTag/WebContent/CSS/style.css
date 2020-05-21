@@ -1,0 +1,10 @@
+@charset "UTF-8";
+body {
+	font-size: 16px;
+}
+p {
+	background-color: #555;
+	color: #BBB;
+	font-weight: bold;
+	font-size: 1.7em;
+}
