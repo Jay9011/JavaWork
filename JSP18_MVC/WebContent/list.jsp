@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.lec.beans.*" %>
-<jsp:useBean id="dao" class="com.lec.beans.WriteDAO"/> <%-- DAO bean 생성 --%>
-<%	// dao 사용한 트랜잭션
-	WriteDTO[] arr = dao.select();
+
+<%	// Controller 로부터 결과 데이터 받음.
+	WriteDTO[] arr = (WriteDTO[])request.getAttribute("list");
 %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -35,7 +35,7 @@ table, th, td {
 %>
 		<tr>
 			<td><%= arr[i].getUid() %></td>
-			<td><a href='view.jsp?uid=<%= arr[i].getUid() %>'><%= arr[i].getSubject() %></a></td>
+			<td><a href='view.do?uid=<%= arr[i].getUid() %>'><%= arr[i].getSubject() %></a></td>
 			<td><%= arr[i].getName() %></td>
 			<td><%= arr[i].getViewCnt() %></td>
 			<td><%= arr[i].getRegDate() %></td>
@@ -46,6 +46,6 @@ table, th, td {
 %>
 	</table>
 	<br>
-	<button onclick="location.href='write.jsp'">신규등록</button>
+	<button onclick="location.href='write.do'">신규등록</button>
 </body>
 </html>
