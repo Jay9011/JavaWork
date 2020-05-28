@@ -1,5 +1,7 @@
 package com.lec.beans;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * @DTO : Data Transfer Object
  *      Data를 담아 나르기 위한 객체.
@@ -12,7 +14,9 @@ public class WriteDTO {
 	private String subject; // wr_subject
 	private String content; // wr_content
 	private String name; // wr_name
+	@JsonProperty("viewcnt")
 	private int viewCnt; // wr_viewcnt
+	@JsonProperty("regdate")
 	private String regDate; // wr_regDate
 
 	/**
