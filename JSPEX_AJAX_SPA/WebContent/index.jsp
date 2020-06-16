@@ -52,27 +52,55 @@
 	</ul>
 </div>
 
-<%--글작성 --%>
+<%-- 글작성 / 글보기 / 글수정 --%>
 <div id="dlg_write" class="modal">
 
   <form class="modal-content animate" id="frmWrite" name="frmWrite" method="post">
 
-    <div class="container">
-      <h3>새글 작성</h3>
+	<div class="container">
+		<h3 class="title">새글 작성</h3>
 
-      <span class="close" title="Close Modal">&times;</span>
+		<span class="close" title="Close Modal">&times;</span>
 
-      <label for="subject"><b>글제목</b></label>
-      <input type="text" placeholder="글제목(필수)" name="subject" required>
+		<input type="hidden" name="uid"> <!-- 삭제나 수정을 위해 필요 -->
 
-      <label for="name"><b>작성자</b></label>
-      <input type="text" placeholder="작성자(필수)" name="name" required>
+		<div class="d01 btn_group_header">
+			<div class="left">
+				<p id="viewcnt"></p>
+			</div>
+			<div class="right">
+				<p id="regdate"></p>
+			</div>
+			<div class="clear"></div>
+		</div>
 
-      <label for="content"><b>내용</b></label>
-      <textarea placeholder="글내용" name="content"></textarea>
+		<label for="subject"><b>글제목</b></label>
+		<input type="text" placeholder="글제목(필수)" name="subject" required>
 
-      <button type="submit" class="btn success">작성</button>
-    </div>
+		<label for="name"><b>작성자</b></label>
+		<input type="text" placeholder="작성자(필수)" name="name" required>
+
+		<label for="content"><b>내용</b></label>
+		<textarea placeholder="글내용" name="content"></textarea>
+
+		<div class="d01 btn_group_write">
+			<button type="submit" class="btn success fullbtn">작성</button>
+		</div>
+		<div class="d01 btn_group_view">
+			<div class="left">
+				<button type="button" class="btn danger" id="viewDelete">삭제</button>
+			</div>
+			<div class="right">
+				<button type="button" class="btn info" id="viewUpdate">수정</button>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="d01 btn_group_update">
+			<div>
+				<button type="button" class="btn info fullbtn" id="updateOk">수정완료</button>
+			</div>
+		</div>
+	</div>
   </form>
 </div>
 
