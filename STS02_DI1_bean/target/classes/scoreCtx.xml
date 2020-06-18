@@ -77,4 +77,14 @@
 	 	<constructor-arg value="악몽이다"/>
 	 </bean>
 
+	 <bean id="myScore8" class="com.lec.spring.Score">
+	 	<property name="score">
+	 		<list>
+	 			<value>100</value>
+	 			<value>90</value>
+	 			<value>94</value>
+	 		</list>
+	 	</property>
+	 </bean>
+
 </beans>

@@ -39,6 +39,9 @@ public class DIMain03 {
 		score = ctx.getBean("myScore7", Score.class);
 		System.out.println(score);
 
+		score = ctx.getBean("myScore8", Score.class);
+		System.out.println(score);
+
 		System.out.println("생성된 빈의 개수 : " + ctx.getBeanDefinitionCount());
 		for (int i = 1; i <= ctx.getBeanDefinitionCount(); i++) {
 			System.out.println(ctx.getBean("myScore" + i));

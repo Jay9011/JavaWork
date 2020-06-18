@@ -1,6 +1,7 @@
 package com.lec.spring;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Score {
 	int kor;	// 국어 점수
@@ -46,6 +47,12 @@ public class Score {
 	public void setMath(int math) { this.math = math; }
 	public String getComment() { return comment; }
 	public void setComment(String comment) { this.comment = comment; }
+
+	public void setScore(List<Integer> scores) {
+		this.kor = scores.get(0);
+		this.eng = scores.get(1);
+		this.math = scores.get(2);
+	}
 
 	@Override
 	public String toString() {
