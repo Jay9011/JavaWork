@@ -8,26 +8,41 @@ public class DIMain04 {
 
 	public static void main(String[] args) {
 		System.out.println("Main 시작");
-
+		
 		// 컨테이너 생성
-		GenericXmlApplicationContext ctx
+		GenericXmlApplicationContext ctx 
 			= new GenericXmlApplicationContext("classpath:studentCtx.xml");
-		System.out.println("--- 컨테이너 생성 ---");
-
-		Student stu1 = ctx.getBean("Yun", Student.class);
+		System.out.println("--컨테이너 생성--");
+		
+		Student stu1 = ctx.getBean("Hong", Student.class);
 		System.out.println(stu1);
-
+		
 		Student stu2 = ctx.getBean("Joo", Student.class);
 		System.out.println(stu2);
-
+		
 		System.out.println();
 		stu2.getScore().setKor(100);
 		System.out.println(stu2);
-
-		System.out.println(stu1);
-
-		ctx.close();
+		
+		System.out.println(stu1);  // Hong 의 국어점수도 바뀌어져 있다.
+		
+		
+		ctx.close();  
 		System.out.println("Main 종료");
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

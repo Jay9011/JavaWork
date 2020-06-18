@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
 
 	<bean id="scoreA" class="com.lec.spring.Score">
-		<constructor-arg value="99"/>
-		<constructor-arg value="87"/>
+		<constructor-arg value="88"/>
+		<constructor-arg value="70"/>
 		<constructor-arg value="91"/>
-		<constructor-arg value="좋아요"/>
+		<constructor-arg value="좋아요"/>	
 	</bean>
 
-	<!-- 생성자 매개변수 reference 타입은 ref 사용 -->
-	<bean id="Yun" class="com.lec.spring.Student">
-		<constructor-arg value="윤종섭"/>
+	<!--  생성자 매개변수 reference 타입은 ref 사용 -->
+	<bean id="Hong" class="com.lec.spring.Student">
+		<constructor-arg value="홍성용"/>
 		<constructor-arg value="28"/>
-		<!-- <constructor-arg ref="scoreA"/> -->
+		<!--  <constructor-arg ref="scoreA"/> -->
+		
 		<constructor-arg>
 			<ref bean="scoreA"/>
 		</constructor-arg>
@@ -26,6 +27,22 @@
 		<property name="age" value="23"/>
 		<property name="score" ref="scoreA"/>
 	</bean>
+	
+	
+	
+
+
 
 
 </beans>
+
+
+
+
+
+
+
+
+
+
+
