@@ -38,6 +38,7 @@
 	
 	<h2>글작성2</h2>
 	<%-- 글 내용이 많을수 있기 때문에 POST 방식 사용 --%>
+	<%-- int 매개변수 setter 도 동작할까? --%>
 	<form name="frm" action="writeOk2" method="post" onsubmit="return chkSubmit()">
 		uid: <input type="text" name="uid" value="13" /><br>
 		작성자: <input type="text" name="name" value="윤종섭"/><br>

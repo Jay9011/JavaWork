@@ -11,3 +11,5 @@ uid : ${DTO.uid }<br>
 작성자 : ${DTO.name }<br>
 글 제목 : ${DTO.subject }<br>
 내용 : ${DTO.content }<br>
+조회수 : ${DTO.viewCnt }<br>
+등록일 : ${DTO.regDate }<br>

@@ -182,6 +182,7 @@ public class HomeController {
 	@RequestMapping(value = "/board/writeOk2", method = RequestMethod.POST)
 	public String writeOkBoard(
 			@ModelAttribute("DTO") WriteDTO dto) {
+		System.out.println(dto);
 		return "/board/writeOk2";
 	} // end writeOkBoard()
 	
