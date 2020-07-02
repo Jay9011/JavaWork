@@ -1,6 +1,7 @@
 package com.lec.sts13_jdbc.board.command;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.ui.Model;
@@ -8,7 +9,7 @@ import org.springframework.ui.Model;
 import com.lec.sts13_jdbc.board.beans.BWriteDAO;
 import com.lec.sts13_jdbc.board.beans.BWriteDTO;
 
-public class BViewCommand implements BCommand {
+public class BSelectCommand implements BCommand {
 
 	@Override
 	public void execute(Model model) {
@@ -25,6 +26,5 @@ public class BViewCommand implements BCommand {
 		// Arrays.asList(T... a) 매서드는 가변매개변수로 받아올 수 있기 때문에, 
 		// 단 하나의 자료를 리스트로 변환시킬 수 있기도 하다.
 		// Arrays.asList("aaa", "bbb")
-		
 	} // end execute()
 } // end Command
