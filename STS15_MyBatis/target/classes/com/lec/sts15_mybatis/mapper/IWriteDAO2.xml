@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lec.sts15_mybatis.board.beans.IWriteDAO">
+	<!-- flushCache 는 캐시를 지울지의 여부 -->
+	<!-- parameterType 에는 매개변수의 타입 객체 -->
+<!-- <insert id="insert" flushCache="true"
+		parameterType="com.lec.sts15_mybatis.board.beans.BWriteDTO">
+		
+		INSERT INTO 
+			test_write 
+			(wr_uid, wr_subject, wr_content, wr_name)
+		VALUES
+			(test_write_seq.nextval, #{subject}, #{content}, #{name})
+	</insert> -->
+	<!-- #{} : 매개변수의 getter 를 이용해서 해당 값들을 불러온다. prepared statement 에서 ? 를 쓰듯이 #{} 을 사용한다. -->
+	
+	<!-- <insert id="insert" flushCache="true">
+		INSERT INTO 
+			test_write 
+			(wr_uid, wr_subject, wr_content, wr_name)
+		VALUES
+			(test_write_seq.nextval, #{param1}, #{param2}, #{param3})
+	</insert> -->
+	<!-- #{param} : 매개변수의 파라미터가 많은 경우 param 을 쓰면 매개변수를 순서대로 받아온다. -->
+
+	<insert id="insert" flushCache="true"
+		parameterType="com.lec.sts15_mybatis.board.beans.BWriteDTO"
+		keyProperty="uid"
+		useGeneratedKeys="true"
+		keyColumn="wr_uid">
+		INSERT INTO 
+			test_write 
+			(wr_uid, wr_subject, wr_content, wr_name)
+		VALUES
+			(test_write_seq.nextval, #{subject}, #{content}, #{name})
+	</insert>
+	
+	<update id="incViewCnt" flushCache="true">
+		UPDATE test_write 
+		SET wr_viewcnt = wr_viewcnt + 1 
+		WHERE wr_uid = #{param1}
+	</update>
+	
+	<select id="selectByUid"
+		resultType="com.lec.sts15_mybatis.board.beans.BWriteDTO">
+		SELECT wr_uid "uid", 
+			wr_subject subject, 
+			wr_content content, 
+			wr_name name, 
+			wr_viewcnt viewcnt, 
+			wr_regdate regDate
+		FROM test_write 
+		WHERE wr_uid = #{param1}
+	</select>
+	
+	<!-- <update id="update">
+		UPDATE test_write 
+		SET wr_subject = #{subject}, 
+			wr_content = #{content} 
+		WHERE wr_uid = #{uid}
+	</update> -->
+	
+	<delete id="deleteByUid">
+		DELETE 
+		FROM test_write 
+		WHERE wr_uid = #{param1}
+	</delete>
+	
+	<update id="update">
+		UPDATE test_write 
+		SET wr_subject = #{a.subject}, 
+			wr_content = #{a.content} 
+		WHERE wr_uid = #{param1}
+	</update>
+	
+	<select id="searchBySubject"
+		resultType="com.lec.sts15_mybatis.board.beans.BWriteDTO">
+		<![CDATA[
+			SELECT * 
+			FROM test_write
+			WHERE wr_uid > 10
+		]]>
+	</select>
+</mapper>
