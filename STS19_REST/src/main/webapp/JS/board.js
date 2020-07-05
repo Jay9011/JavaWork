@@ -85,7 +85,7 @@ function updateList(jsonObj){
 			result += "<td><span class='subject' data-uid='" + items[i].uid + "'>" + items[i].subject + "</span></td>";
 			result += "<td>" + items[i].name + "</td>";
 			result += "<td><span data-viewCnt='" + items[i].uid + "'>" + items[i].viewCnt + "</span></td>";
-			result += "<td>" + dateformatForTimestamp(new Date(items[i].regDate)) + "</td>";
+			result += "<td>" + dateformatForTimestamp(items[i].regDate) + "</td>";
 			result += "</tr>";
 		} // end for
 		$("#list tbody").html(result);	// 테이블 업데이트

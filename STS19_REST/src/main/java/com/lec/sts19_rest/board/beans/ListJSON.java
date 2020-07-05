@@ -2,11 +2,13 @@ package com.lec.sts19_rest.board.beans;
 
 import java.util.List;
 
+// JSON 으로 보낼 형식 지정하기
 public class ListJSON {
 	private int count;
 	private String status="FAIL";
 	private String message="";
 	private int page;
+	// 내가 사용 할 게시판 리스트를 담을 List<>
 	private List<BWriteDTO> data;
 	private int totalpage;
 	private int totalcnt;

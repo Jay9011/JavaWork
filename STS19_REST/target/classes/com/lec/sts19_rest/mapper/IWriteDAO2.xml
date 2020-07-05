@@ -22,8 +22,8 @@
 		VALUES
 			(test_write_seq.nextval, #{param1}, #{param2}, #{param3})
 	</insert> -->
-	<!-- #{param} : 매개변수의 파라미터가 많은 경우 param 을 쓰면 매개변수를 순서대로 받아온다. -->
 
+	<!-- #{param} : 매개변수의 파라미터가 많은 경우 param 을 쓰면 매개변수를 순서대로 받아온다. -->
 	<insert id="insert" flushCache="true"
 		parameterType="com.lec.sts19_rest.board.beans.BWriteDTO"
 		keyProperty="uid"

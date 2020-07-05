@@ -86,7 +86,6 @@ public class BoardController {
 	
 	@RequestMapping("/rest")
 	public String restList(Model model) {
-		
 		return "home";
 	} // end restList()
 	

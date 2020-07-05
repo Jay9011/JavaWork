@@ -2,6 +2,7 @@ package com.lec.sts19_rest.board.beans;
 
 import java.sql.Timestamp;
 
+// DB에서 사용할 값들 멤버변수로 지정해주기
 public class BWriteDTO {
 	private int uid;
 	private String subject;
@@ -13,6 +14,7 @@ public class BWriteDTO {
 	public BWriteDTO() {
 		super();
 	}
+	// 생성할 때 한 번에 값 넣기
 	public BWriteDTO(int uid, String subject, String content, String name, int viewCnt, Timestamp regDate) {
 		super();
 		this.uid = uid;

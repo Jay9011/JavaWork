@@ -18,6 +18,7 @@ import com.lec.sts19_rest.board.command.BRViewCommand;
 @RestController
 @RequestMapping("/board")
 public class BoardRestController {
+	// 사용 할 Command 목록
 	@Autowired
 	BRViewCommand viewCommand;
 	
@@ -52,10 +53,10 @@ public class BoardRestController {
 		} // end if-else
 		
 		json.setMessage(message.toString());
+		json.setStatus(status);
 		json.setCount(list.size());
 		json.setPage(page);
 		json.setPagerows(pageRows);
-		json.setStatus(status);
 		json.setTotalcnt(totalCnt);
 		json.setTotalpage(totalPage);
 		json.setWritepages(writePages);
