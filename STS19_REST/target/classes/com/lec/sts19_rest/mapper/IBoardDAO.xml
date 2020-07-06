@@ -23,4 +23,22 @@
 		SELECT count(*) 
 		FROM test_write
 	</select>
+	
+	<!-- 
+		배열을 파라미터로 받는 경우 collection 에 꼭 array 로!
+		
+		item : foreach 문 안에서 사용할 매개변수 이름
+		separator : foreach 문이 한 번 돌고 다음번 돌 때의 구분자.
+		open : 시작 문자열
+		close : 종료 문자열 
+	-->
+	<delete id="deleteByUids" flushCache="true"
+		parameterType="java.util.ArrayList">
+		DELETE FROM test_write
+		WHERE wr_uid in(
+			<foreach collection="array" item="item" index="index" separator=",">
+				${item}
+			</foreach>
+		)
+	</delete>
 </mapper>

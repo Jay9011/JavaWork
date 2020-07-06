@@ -396,6 +396,8 @@ function dateformatForTimestamp(timestamp){
 	hh = hh >= 10 ? hh : '0' + hh;
 	var mm = D.getMinutes();
 	mm = mm >= 10 ? mm : '0' + mm;
+	var ss = D.getSeconds();
+	ss = ss >= 10 ? ss : '0' + ss;
 	
-	return  YYYY + '-' + MM + '-' + DD + ' ' + hh + ':' + mm
+	return  YYYY + '-' + MM + '-' + DD + ' ' + hh + ':' + mm + ':' + ss;
 } // end dateformatForTimestamp()
