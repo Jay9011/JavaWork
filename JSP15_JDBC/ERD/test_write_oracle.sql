@@ -44,3 +44,20 @@ INSERT INTO TEST_WRITE (WR_UID ,WR_SUBJECT ,WR_CONTENT ,WR_NAME )
 	SELECT TEST_WRITE_SEQ.nextval, wr_subject, WR_CONTENT , WR_NAME FROM TEST_WRITE;
 
 DELETE FROM TEST_WRITE WHERE WR_UID > 26;
+
+
+SELECT wr_uid "uid", 
+	wr_subject subject, 
+	wr_content content, 
+	wr_name name, 
+	wr_viewcnt viewcnt, 
+	wr_regdate regDate
+FROM
+	(SELECT ROWNUM AS RNUM, T.* 
+		FROM (SELECT * 
+				FROM test_write 
+				ORDER BY wr_uid DESC) T)
+WHERE RNUM >= 1 AND RNUM < 10
+;
+			
+		
