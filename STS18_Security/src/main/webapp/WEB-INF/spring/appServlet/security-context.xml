@@ -12,6 +12,14 @@
 
 <bean id="customLoginSuccess"
 	class="com.lec.sts18_sercurity.security.CustomLoginSuccessHandler"/>
+	
+<!-- PasswordEncoder 사용 -->
+<!-- <bean id="customPasswordEncoder"
+	class="com.lec.sts18_sercurity.security.CustomNoOpPasswordEncoder"/> -->
+
+<!-- bcrypt : 스프링에서 제공하는 대표적인 ‘암호’ 인코딩 전용 해시 함수 -->	
+<bean id="bcryptPasswordEncoder"
+	class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 
 <!-- 컨테이너의 HTTP security 요소 -->
 <security:http>
@@ -39,10 +47,23 @@
 <security:authentication-manager>
 	<!-- UserDetailsService 사용자 인증과 권한 처리 -->
 	<security:authentication-provider>
-		<security:user-service>
+		<!-- InMemory 방식 -->
+		<!-- <security:user-service>
 			<security:user name="member" password="{noop}member" authorities="ROLE_MEMBER"/>
 			<security:user name="admin" password="{noop}admin" authorities="ROLE_MEMBER, ROLE_ADMIN"/>
-		</security:user-service>
+		</security:user-service> -->
+		
+		<!-- JDBC 사용 -->
+		<security:jdbc-user-service data-source-ref="dataSource"
+				users-by-username-query=
+					"SELECT userid username, userpw password, enabled FROM tbl_member WHERE userid = ?"
+				authorities-by-username-query=
+					"SELECT userid username, auth authority FROM tbl_member_auth WHERE userid = ?"
+			/>
+		<!-- PasswordEcoder 설정 -->
+		<!-- <security:password-encoder ref="customPasswordEncoder"/> --><!-- PasswordEncoder 사용 -->
+		<security:password-encoder ref="bcryptPasswordEncoder"/><!-- BCryptPasswordEncoder 사용 -->
+		
 	</security:authentication-provider>
 </security:authentication-manager>
 
